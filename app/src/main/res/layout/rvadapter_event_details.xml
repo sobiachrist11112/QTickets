@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:id="@+id/ticketTypeLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/square_button">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:id="@+id/tv_ticketType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="General Ticket"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve" />
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/tv_price_edetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/squre_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/decImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/minus"
+                    android:gravity="center" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/totalPeapleCountTV"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/upcoming_tab_light"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/incImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/plus"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="135dp"
+            android:background="@color/colorWhite" />
+
+    </RelativeLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_ticketType"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="Fan Pit"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_price_edetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="QR500"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_background"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_tickets"/>
+
+            <Spinner
+                android:id="@+id/sp_seats_event_details"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center"></Spinner>
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+
+</LinearLayout>

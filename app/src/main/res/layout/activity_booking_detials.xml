@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scorlview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_pay"
+        android:layout_below="@+id/include"
+        android:background="@color/colorBlack">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backcolor"
+                tools:ignore="MissingConstraints">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txt_review_your_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/black_back"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_ticket_blue"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/review"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ten"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/movie_image"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_review_your_ticket" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/movie_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sixteen"
+                    app:layout_constraintLeft_toRightOf="@+id/movie_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_review_your_ticket" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_movie_loca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintLeft_toRightOf="@+id/movie_image"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_movie_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintLeft_toRightOf="@+id/movie_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_movie_loca" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_movie_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintLeft_toRightOf="@+id/movie_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_movie_date" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_movie_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintLeft_toRightOf="@+id/movie_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_movie_time" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/seat_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@color/backcolor"
+                app:layout_constraintTop_toBottomOf="@+id/c1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:paddingBottom="10dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/seat_recyclerview">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/popup_back"
+                    android:layout_margin="@dimen/eight"
+                    >
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_novo_ticket_heder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/b_Tickets"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    android:visibility="gone"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_novo_ticket_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/five"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_novo_ticket_heder" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/payment_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:text="@string/paymentsummary"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible"
+                    android:background="@color/backcolor"
+                    android:padding="@dimen/ten"
+                    android:textSize="@dimen/forteen"
+                    android:layout_margin="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rec_novo_ticket_cost"
+                    tools:ignore="MissingConstraints" />
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_txt_ticket_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/ticket_cost"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintTop_toBottomOf="@+id/payment_summary"
+                    tools:ignore="MissingConstraints" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_ticket_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fifteen"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:visibility="visible"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/payment_summary" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_txt_no_tic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/no_of_tickets"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_ticket_cost"
+                    tools:ignore="MissingConstraints" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt__no_tic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:visibility="visible"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_ticket_cost" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_txt_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_txt_no_tic"
+                    tools:ignore="MissingConstraints" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt__total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt__no_tic" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/txt_txt_service_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/service"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/forteen"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_txt_total_price"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/txt__service_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/forteen"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt__total_price" />
+
+                <!--<com.production.qtickets.Utils.TextviewRegular-->
+                <!--android:id="@+id/txt_txt_coupon"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="15dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="@string/service"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--android:textSize="@dimen/forteen"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/txt_txt_service_charge" />-->
+                <!--<com.production.qtickets.Utils.TextviewRegular-->
+                <!--android:id="@+id/txt__coupon_code"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="15dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="@string/ticket_cost"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--android:textSize="@dimen/forteen"-->
+                <!--app:layout_constraintRight_toRightOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/txt_txt_service_charge" />-->
+
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tvwhtsappmoview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/send_ticket_inwhtsapp"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="@dimen/forteen"
+                        android:singleLine="true"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_txt_service_charge"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/txt__whatsapp_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/forteen"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_txt_service_charge"/>
+
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="@dimen/five"
+                        android:layout_marginEnd="@dimen/five"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorGray"
+                        app:layout_constraintTop_toBottomOf="@+id/tvwhtsappmoview" />
+
+
+                    <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_txt_total_payble_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_payment"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintTop_toBottomOf="@+id/view2"
+                    tools:ignore="MissingConstraints" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt__txt_total_payble_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    android:layout_marginBottom="@dimen/ten"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/c2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/edit_textLabel"
+                    app:hintEnabled="false"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
+                        android:hint="@string/name"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/fifteen" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:theme="@style/edit_textLabel"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_input_name">
+
+                    <EditText
+                        android:id="@+id/edt_mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="@string/youremail"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/fifteen" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spin_country_code"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="9dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:popupBackground="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_input_mail" />
+
+                <View
+                    android:layout_width="140dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/colorWhite"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spin_country_code" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:theme="@style/edit_textLabel"
+                    app:hintEnabled="false"
+                    android:layout_marginTop="9dp"
+                    app:layout_constraintLeft_toRightOf="@+id/spin_country_code"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_input_mail">
+
+                    <EditText
+                        android:id="@+id/edt_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="@string/enterphoneno"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/fifteen" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txt__or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/or"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_input_phone_number" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_back_with_corners"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="40dp"
+                    android:paddingStart="40dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/login"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/eighteen"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt__or" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:visibility="visible"
+                    app:layout_constraintHorizontal_weight="0.3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_login"
+
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/couponCodes_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txt_input_voucher"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:theme="@style/edit_textLabel"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/edt_voucher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:hint="@string/voucher"
+                            android:singleLine="true"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/colorWhite"
+                            android:textSize="@dimen/fifteen" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/btn_apply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_back_with_corners"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="8dp"
+                        android:paddingEnd="40dp"
+                        android:paddingStart="40dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/c_apply"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/forteen"
+                        android:layout_weight="1.2"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/voucherCodes_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/couponCodes_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:text="SELECT BELOW VOUCHERS"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#FFE8E8E5">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF020202"
+                            android:text="E-VOUCHERS"/>
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF020202"
+                            android:text="BALANCE"/>
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/voucherCodes_recyclerView">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <!--     <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal"
+                             android:padding="5dp"
+                             android:layout_gravity="center_vertical"
+                             android:background="#FFF5F5F4">
+
+                             <CheckBox
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content" />
+
+                             <LinearLayout
+                                 android:layout_gravity="center_vertical"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:orientation="horizontal">
+
+                                 <TextView
+                                     android:layout_weight="1"
+                                     android:id="@+id/tv_voucher_codes"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content" />
+
+                                 <TextView
+                                     android:layout_weight="1"
+                                     android:id="@+id/tv_voucher_value"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content" />
+
+                             </LinearLayout>
+
+
+
+
+                         </LinearLayout>-->
+
+
+
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/terms_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:buttonTint="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@+id/voucherCodes_layout" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txtaccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/iaccept"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintLeft_toRightOf="@+id/terms_checkbox"
+                    app:layout_constraintTop_toBottomOf="@+id/voucherCodes_layout" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txt__accept_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/terms"
+                    android:textColor="@color/buttoncolor"
+                    android:textSize="@dimen/forteen"
+                    app:layout_constraintLeft_toRightOf="@+id/txtaccept"
+                    app:layout_constraintTop_toBottomOf="@+id/voucherCodes_layout" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    android:checked="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:buttonTint="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@+id/terms_checkbox" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txtwhatsApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/send_ticket_inwhtsapp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    android:gravity="center"
+                    android:checked="true"
+                    app:layout_constraintLeft_toRightOf="@+id/cb_whatsapp"
+                    app:layout_constraintTop_toBottomOf="@+id/terms_checkbox" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/pay"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/eighteen" />
+
+</RelativeLayout>

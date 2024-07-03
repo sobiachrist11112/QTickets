@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/black">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/include"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_all_events"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/allEvents"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/twelve" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_this_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_color_without_corner"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/thisWeek"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twelve" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_this_month"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_color_without_corner"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/thisMonth"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twelve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/lin_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_language" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filters"
+                        android:textColor="@color/buttoncolor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@color/buttoncolor" />
+
+                <LinearLayout
+                    android:id="@+id/lin_vennue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_cinemas" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/venues"
+                        android:textColor="@color/movie_text_color"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eventlist_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/filter_layout"
+                android:layout_below="@+id/r1"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/include_no_booking_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+    <com.production.qtickets.utils.TextviewBold
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/no_txt_available1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_events"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/eighteen"
+        />
+
+</RelativeLayout>

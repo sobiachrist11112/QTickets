@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/soldout"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_background"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/backcolor"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/qt_logo" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="right"
+                    android:text="www.q-tickets.com"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/thirteen" />
+
+            </LinearLayout>
+
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/alert_cov_en_t"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/thirteen" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:justificationMode="inter_word"
+                android:lineSpacingMultiplier="1"
+                android:text="@string/alert_cov_en"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/thirteen" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/alert_cov_ar_t"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/thirteen" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:justificationMode="inter_word"
+                android:lineSpacingMultiplier="1.1"
+                android:text="@string/alert_cov_ar"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/thirteen" />
+
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/btn_ok"
+                android:layout_width="62dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:text="OK"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sixteen" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

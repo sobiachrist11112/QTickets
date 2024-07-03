@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/buttom_back"
+    android:visibility="visible">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/buttom_back">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:contentInsetStart="10dp"
+                android:contentInsetLeft="10dp"
+                android:contentInsetEnd="10dp"
+                android:contentInsetRight="10dp"
+                android:visibility="visible"
+                app:contentInsetEnd="10dp"
+                app:contentInsetRight="10dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_search_qt">
+
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/img_logo"
+                        android:layout_width="200dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/qt_logo" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/spinnerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp">
+
+                        <Spinner
+                            android:id="@+id/spinner_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/five"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:popupBackground="@drawable/dashboard_spin_back" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/five"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toEndOf="@+id/spinner_country"
+                            android:focusableInTouchMode="false"
+                            android:src="@drawable/ic_down_arrow"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/headerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_logo" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relative_include"
+        android:layout_below="@+id/app_bar_layout"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/l1_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </RelativeLayout>
+
+
+                <!--                   <com.daimajia.slider.library.SliderLayout-->
+                <!--                       android:id="@+id/slider"-->
+                <!--                       android:layout_width="match_parent"-->
+                <!--                       android:layout_marginLeft="12dp"-->
+                <!--                       android:layout_marginTop="12dp"-->
+                <!--                       android:layout_marginRight="12dp"-->
+                <!--                       android:layout_height="180dp" />-->
+
+                <ImageView
+                    android:id="@+id/iv_datanotfound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/datanotfound"
+                    android:visibility="gone">
+
+
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/l1_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/movieLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="4dp">
+
+
+                        <View
+                            android:id="@+id/v1_stick"
+                            android:layout_width="6dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/ten"
+                            android:background="@color/plane_white">
+
+
+                        </View>
+
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/txt_movie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_toRightOf="@+id/v1_stick"
+                            android:text="@string/s_Movies"
+                            android:textAllCaps="true"
+                            android:textColor="#E5E5E5"
+                            android:textSize="@dimen/eighteen"
+                            android:textStyle="bold" />
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:id="@+id/tvViewAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="12dp"
+                            android:drawableRight="@drawable/ic_arrow_forward"
+                            android:drawablePadding="6dp"
+                            android:drawableTint="@color/colorWhite"
+                            android:paddingStart="12dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="2dp"
+                            android:text="View All"
+                            android:textColor="#7F7F7F"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l2_events"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/eventLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp">
+
+
+                        <View
+                            android:id="@+id/v2_stick"
+                            android:layout_width="6dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/plane_white">
+
+
+                        </View>
+
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_toRightOf="@+id/v2_stick"
+                            android:text="@string/s_Events"
+                            android:textAllCaps="true"
+                            android:textColor="#E5E5E5"
+                            android:textSize="@dimen/eighteen"
+                            android:textStyle="bold" />
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:id="@+id/tv_events_seeall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="3dp"
+                            android:drawableRight="@drawable/ic_arrow_forward"
+                            android:drawablePadding="6dp"
+                            android:drawableTint="@color/colorWhite"
+                            android:paddingStart="12dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="2dp"
+                            android:text="View All"
+                            android:textColor="@color/light_grey_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/moview_v2"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/tv_events_seeall"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/contacttextcolor">
+
+                    </View>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/event_list_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l3_sports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/sportsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp">
+
+
+                        <View
+                            android:id="@+id/v3_stick"
+                            android:layout_width="6dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/plane_white">
+
+
+                        </View>
+
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_toRightOf="@+id/v3_stick"
+                            android:text="@string/s_sports"
+                            android:textAllCaps="true"
+                            android:textColor="#E5E5E5"
+                            android:textSize="@dimen/eighteen"
+                            android:textStyle="bold" />
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:id="@+id/tv_sports_seeall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="12dp"
+                            android:drawableRight="@drawable/ic_arrow_forward"
+                            android:drawablePadding="6dp"
+                            android:drawableTint="@color/colorWhite"
+                            android:paddingStart="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="2dp"
+                            android:text="View All"
+                            android:textColor="@color/light_grey_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:id="@+id/sports_v2"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/tv_sports_seeall"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/contacttextcolor">
+
+                    </View>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/sports_list_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l4_liesure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/liesureLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp">
+
+
+                        <View
+                            android:id="@+id/v4_stick"
+                            android:layout_width="8dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/plane_white">
+
+
+                        </View>
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_toRightOf="@+id/v4_stick"
+                            android:text="@string/s_liesure"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/eighteen"
+                            android:textStyle="bold" />
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:id="@+id/tv_leisure_seeall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:drawableRight="@drawable/ic_arrow_forward"
+                            android:drawablePadding="6dp"
+                            android:drawableTint="@color/colorWhite"
+                            android:paddingStart="12dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="2dp"
+                            android:text="View All"
+                            android:textColor="@color/light_grey_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/leisure_v2"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/tv_leisure_seeall"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/contacttextcolor">
+
+                    </View>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/leisure_list_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/include_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

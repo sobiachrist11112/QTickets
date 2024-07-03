@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:layoutDirection="ltr">
+
+    <!--<ImageView
+        android:id="@+id/img_close"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+-->
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sixteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_close">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginLeft="@dimen/sixteen"
+            android:layout_marginRight="@dimen/sixteen"
+            android:layout_marginTop="@dimen/five"
+            android:background="@color/backcolor"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:src="@drawable/qt_logo" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_confirmation_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="end"
+                    android:text="Rangasthalam"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sixteen"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_bar_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:src="@drawable/qt_logo"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:scaleType="centerCrop"
+                    android:src="@color/background_showTimes" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_movie_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="Rangasthalam"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sixteen" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_movie_genere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:text="Drama | Action"
+                    android:textColor="@color/background_showTimes"
+                    android:textSize="@dimen/twelve" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layerType="software"
+                    android:src="@drawable/booking_history_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/txt_ticket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_tickets"
+                            android:textAllCaps="true"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/tv_tickets"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:textAllCaps="true"
+                            android:textColor="@color/background_showTimes"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="price"
+                            android:textAllCaps="true"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/txt_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="245 qar"
+                            android:textAllCaps="true"
+                            android:textColor="@color/background_showTimes"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/l_sets"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/txt_seat_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="11dp"
+                            android:text="seats"
+                            android:textAllCaps="true"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/txt_seats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:text="d14, d15, d16, d17, d18"
+                            android:textAllCaps="true"
+                            android:textColor="@color/background_showTimes"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/twelve"
+                    android:layout_marginRight="@dimen/twelve"
+                    android:layout_marginTop="@dimen/ten"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Venue details"
+                            android:textAllCaps="true"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/venuue_detailes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="6- square mall, al thumaha, near f-ring road"
+                            android:textAllCaps="true"
+                            android:textColor="@color/background_showTimes"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="date &amp; time"
+                            android:textAllCaps="true"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/txt_date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:maxEms="8"
+                            android:text="sat, 24, mar, 2018 04:55 pm"
+                            android:textAllCaps="true"
+                            android:textColor="@color/background_showTimes"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

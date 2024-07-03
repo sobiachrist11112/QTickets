@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:id="@+id/tv_field_title"
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Prefix"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:text="*"
+            android:id="@+id/tv_mandatorytext"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/event"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_height="wrap_content">
+
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:id="@+id/cb_disclamer"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            tools:ignore="TouchTargetSizeCheck">
+
+
+        </CheckBox>
+
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:layout_width="0dp"
+            android:layout_weight="2.2"
+            android:text="@string/pleaseselect"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+
+        </com.production.qtickets.utils.TextviewRegular>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:id="@+id/ll_download"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_download_icon"
+                android:layout_height="20dp">
+
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

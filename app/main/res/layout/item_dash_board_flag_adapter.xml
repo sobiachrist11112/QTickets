@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="22dp"
+        android:id="@+id/img_flag"
+        android:src="@drawable/flag_afghanistan"
+        android:layout_height="22dp">
+
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <com.production.qtickets.utils.TextviewBold
+        android:layout_width="wrap_content"
+        android:id="@+id/txt_country_code"
+        android:textSize="@dimen/fifteen"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/plane_white"
+        android:layout_height="wrap_content">
+
+
+    </com.production.qtickets.utils.TextviewBold>
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_marginStart="6dp"
+        android:id="@+id/iv_downarrow"
+        android:src="@drawable/ic_down_arrow"
+        android:layout_height="20dp">
+
+
+    </ImageView>
+
+
+</LinearLayout>

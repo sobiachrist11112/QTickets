@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:layoutDirection="ltr"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_close" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_close"
+        android:layout_marginTop="@dimen/sixteen"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/movie_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/img_close" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_user_main_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/yourrating"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sixteen"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_movie_name" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_rating" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_review_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:theme="@style/edit_textLabel_white"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@+id/rating">
+
+                    <EditText
+                        android:id="@+id/edt_review_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="@string/reviewtitle"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/fifteen" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_review_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:theme="@style/edit_textLabel_white"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_input_review_title">
+
+                    <EditText
+                        android:id="@+id/edt_review_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="@string/highlight"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/fifteen" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/txt_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_back_with_corners"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="@dimen/ten"
+                    android:paddingStart="@dimen/twenty"
+                    android:paddingEnd="@dimen/twenty"
+                    android:text="@string/c_submit"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sixteen"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_input_review_summary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

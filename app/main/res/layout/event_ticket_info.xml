@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/field_bg_cornner"
+    android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/iv_close"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_close_brown_button"
+                    android:layout_height="24dp">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/btn_save_custom_field"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tv_ticket_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lay_fields"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_save_custom_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/themecolor"
+                    android:text="ADD GUEST"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/backcolor">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/include"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/movie_bookings"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:text="@string/movies"
+            android:textColor="@color/white"
+            android:textSize="@dimen/forteen" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/event_bookings"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/movie_unselected_button_back"
+            android:gravity="center"
+            android:text="@string/events"
+            android:textColor="@color/white"
+            android:textSize="@dimen/forteen" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movielist_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="No Notifications"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/twenty"
+            android:textStyle="bold"
+            android:id="@+id/no_notification"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

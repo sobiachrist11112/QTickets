@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_child"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/background_more_curve_childevent"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_withoutdata"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/add"
+                android:layout_height="16dp">
+
+            </ImageView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="12dp"
+                android:id="@+id/tv_guestname"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="@string/adduserinfo"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/ll_withdata"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:text="Filed name"
+                    android:id="@+id/tv_fullanme"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:src="@drawable/editicon"
+                    android:id="@+id/iv_editview"
+                    android:layout_height="28dp">
+
+
+                </ImageView>
+
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:id="@+id/iv_delete"
+                    android:src="@drawable/deleteicon"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="28dp">
+
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/tv_tickettypess"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

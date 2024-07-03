@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".eventQT5.EventHomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/lay_top"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/back_btn" />
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_toRightOf="@+id/btn_back"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lay_bottom"
+            android:layout_below="@+id/lay_top"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.07"
+                        android:singleLine="true"
+                        android:text="PAYMENT SUMMARY"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.07"
+                        android:singleLine="true"
+                        android:text="Please check the below details &amp; proceed"
+                        android:textColor="@color/light_grey_text"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/unselected_button_with_corners"
+                        android:minHeight="92dp"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/tv_event_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.07"
+                            android:maxLines="3"
+                            android:singleLine="false"
+                            android:text="360 PLAY MINI GOLF"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:id="@+id/tv_date_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:letterSpacing="0.07"
+                            android:singleLine="true"
+                            android:text="September 30th, Monday | 2:00 PM"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:id="@+id/tv_venue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:letterSpacing="0.07"
+                            android:singleLine="true"
+                            android:text="City Center Mall"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <RadioGroup
+                            android:id="@+id/rg_coupons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RadioButton
+                                android:id="@+id/rb_couponcode"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/themecolor"
+                                android:checked="true"
+                                android:paddingStart="6dp"
+                                android:text="Voucher"
+                                android:textColor="@color/white">
+
+
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/rb_promocode"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/themecolor"
+                                android:paddingStart="6dp"
+                                android:text="@string/promocode"
+                                android:textColor="@color/white">
+
+
+                            </RadioButton>
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/dotted_border_white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="4dp">
+
+                        <EditText
+                            android:id="@+id/et_coupon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/black"
+                            android:gravity="center_vertical"
+                            android:hint="Have Voucher/Promo?"
+                            android:letterSpacing="0.07"
+                            android:paddingLeft="12dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14dp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+
+                            <Button
+                                android:id="@+id/btn_apply"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/unselected_tab_with_corners"
+                                android:letterSpacing="0.09"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="@string/c_apply"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_remove"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/removecutpn_button"
+                                android:letterSpacing="0.09"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="@string/remove"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/darkgreytab_with_corners"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lay_ticket_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.4"
+                                    android:background="@drawable/lightgrey_with_bottomcorners"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="12dp"
+                                    android:paddingRight="12dp"
+                                    android:paddingBottom="6dp">
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="6dp"
+                                        android:singleLine="true"
+                                        android:text="Sub Total"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="6dp"
+                                        android:singleLine="true"
+                                        android:text="Service Charges"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_coupon_discount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="6dp"
+                                        android:layout_weight="1"
+                                        android:singleLine="true"
+                                        android:text="Coupon Code"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <com.production.qtickets.utils.TextviewBold
+                                            android:id="@+id/one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:singleLine="true"
+                                            android:text="Total Amount"
+                                            android:textColor="@color/plane_white"
+                                            android:textSize="14dp"
+                                            android:textStyle="bold" />
+
+                                        <com.production.qtickets.utils.TextviewBold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toRightOf="@+id/one"
+                                            android:singleLine="true"
+                                            android:text=" (Rounded)"
+                                            android:textColor="@color/plane_white"
+                                            android:textSize="14dp" />
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="12dp"
+                                    android:paddingRight="12dp"
+                                    android:paddingBottom="6dp">
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_sub_total"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="6dp"
+                                        android:gravity="right"
+                                        android:singleLine="true"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_service_charge"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="6dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:singleLine="true"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/coupon_discount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="6dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <com.production.qtickets.utils.TextviewBold
+                                        android:id="@+id/tv_total_amt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lay_login_user_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/unselected_tab_with_corners"
+                        android:minHeight="52dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/lay_continue_as_guest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:background="@drawable/selected_tab_with_corners"
+                            android:gravity="center"
+                            android:minHeight="52dp"
+                            android:orientation="vertical">
+
+                            <com.production.qtickets.utils.TextviewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:letterSpacing="0.07"
+                                android:singleLine="true"
+                                android:text="CONTINUE AS GUEST"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lay_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="center"
+                            android:minHeight="52dp"
+                            android:orientation="vertical">
+
+                            <com.production.qtickets.utils.TextviewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:letterSpacing="0.07"
+                                android:singleLine="true"
+                                android:text="LOGIN"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_guest_user_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+
+                            <EditText
+                                android:id="@+id/et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:hint="Name"
+                                android:inputType="text"
+                                android:letterSpacing="0.07"
+                                android:maxLength="50"
+                                android:minHeight="42dp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp"
+                                android:theme="@style/StyledTilEditTextTheme">
+
+                            </EditText>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginEnd="12dp"
+                                android:text="*"
+                                android:textColor="@color/colorSports">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_marginTop="16dp"-->
+                        <!--                            android:hint="Name"-->
+                        <!--                            android:textColorHint="@color/white"-->
+                        <!--                            android:layout_height="wrap_content">-->
+
+
+                        <!--                            <EditText-->
+                        <!--                                android:id="@+id/et_name"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:minHeight="42dp"-->
+                        <!--                                android:letterSpacing="0.07"-->
+                        <!--                                android:gravity="center_vertical"-->
+                        <!--                                android:singleLine="true"-->
+                        <!--                                android:maxLength="50"-->
+                        <!--                                android:inputType="text"-->
+                        <!--                                android:theme="@style/StyledTilEditTextTheme"-->
+                        <!--                                android:textColor="@color/white"-->
+                        <!--                                android:textSize="14dp" />-->
+
+
+                        <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+
+                            <EditText
+                                android:id="@+id/et_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:hint="Email ID"
+                                android:inputType="text"
+                                android:letterSpacing="0.07"
+                                android:maxLength="50"
+                                android:minHeight="42dp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp"
+                                android:theme="@style/StyledTilEditTextTheme">
+
+                            </EditText>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginEnd="12dp"
+                                android:text="*"
+                                android:textColor="@color/colorSports">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+
+                        <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_marginTop="12dp"-->
+                        <!--                            android:hint="Email ID"-->
+                        <!--                            android:textColorHint="@color/white"-->
+                        <!--                            android:layout_height="wrap_content">-->
+
+
+                        <!--                            <EditText-->
+                        <!--                                android:id="@+id/et_email"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:minHeight="42dp"-->
+                        <!--                                android:letterSpacing="0.07"-->
+                        <!--                                android:gravity="center_vertical"-->
+                        <!--                                android:singleLine="true"-->
+                        <!--                                android:maxLength="50"-->
+                        <!--                                android:inputType="textEmailAddress"-->
+                        <!--                                android:theme="@style/StyledTilEditTextTheme"-->
+                        <!--                                android:textColor="@color/white"-->
+                        <!--                                android:textSize="14dp" />-->
+
+
+                        <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+
+                            <Spinner
+                                android:id="@+id/spinner_countrydropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:backgroundTint="@color/colorWhite"
+                                android:popupBackground="@color/backcolor" />
+
+                            <EditText
+                                android:id="@+id/et_phone_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_toRightOf="@+id/spinner_countrydropdown"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="Phone Number"
+                                android:inputType="phone"
+                                android:letterSpacing="0.07"
+                                android:maxLength="8"
+                                android:minHeight="42dp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp"
+                                android:theme="@style/StyledTilEditTextTheme">
+
+                            </EditText>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginEnd="12dp"
+                                android:text="*"
+                                android:textColor="@color/colorSports">
+
+                            </TextView>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_below="@+id/et_phone_no"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:background="@color/plane_white">
+
+
+                            </View>
+
+
+                        </RelativeLayout>
+
+
+                        <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_marginTop="12dp"-->
+                        <!--                            android:hint="Phone Number"-->
+                        <!--                            android:textColorHint="@color/white"-->
+                        <!--                            android:layout_height="wrap_content">-->
+                        <!--                            <EditText-->
+                        <!--                                android:id="@+id/et_phone_no"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:minHeight="42dp"-->
+                        <!--                                android:letterSpacing="0.07"-->
+                        <!--                                android:gravity="center_vertical"-->
+                        <!--                                android:singleLine="true"-->
+                        <!--                                android:maxLength="8"-->
+                        <!--                                android:inputType="phone"-->
+                        <!--                                android:theme="@style/StyledTilEditTextTheme"-->
+                        <!--                                android:textColor="@color/white"-->
+                        <!--                                android:textSize="14dp"/>-->
+                        <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <Button
+                android:id="@+id/btn_book_now"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/selected_tab_with_corners"
+                android:letterSpacing="0.09"
+                android:text="@string/book"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

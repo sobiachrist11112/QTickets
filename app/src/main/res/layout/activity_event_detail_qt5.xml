@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".eventQT5.EventHomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lay_bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="36dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_btn" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:text="Events"
+                    android:textColor="@color/plane_white"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_addeventincalender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/addtocalender"
+                        android:textColor="@color/plane_white"
+                        android:layout_marginStart="24dp"
+                        android:textSize="14sp">
+
+                    </com.production.qtickets.utils.TextviewRegular>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/cal_ic_sec"
+                        app:tint="@color/plane_white">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/share"
+                            android:layout_marginEnd="8dp"
+                            android:textColor="#dcdcdc"
+                            android:textSize="14sp">
+
+                        </com.production.qtickets.utils.TextviewRegular>
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_share_sec">
+
+                        </ImageView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <!--
+                                        <com.daimajia.slider.library.SliderLayout
+                                            android:id="@+id/slider"
+                                            android:layout_width="match_parent"
+                                            android:visibility="visible"
+                                            android:layout_height="160dp" />
+                        -->
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/recycler"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <com.production.qtickets.utils.TextviewBold
+                                    android:id="@+id/tv_event_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.07"
+                                    android:text="Event Name"
+                                    android:maxLines="3"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/clockLogo"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/cal_ic_sec"
+                                        app:tint="@color/white" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_event_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="date"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:id="@+id/ll_datetime"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+
+                                    <ImageView
+                                        android:id="@+id/date_logo"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_clock_white"
+                                        app:tint="@color/white" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/Locationlogo"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/locationwhite"
+                                        app:tint="@color/colorWhite" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_event_location"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="date"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
+                                <com.production.qtickets.utils.TextviewRegular
+                                    android:id="@+id/tv_admissionview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="13sp">
+
+
+                                </com.production.qtickets.utils.TextviewRegular>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:orientation="horizontal">
+
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_folowustittle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/followus"
+                                        android:textColor="@color/plane_white">
+
+
+                                    </com.production.qtickets.utils.TextviewRegular>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_socailroot"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/iv_fblogin"
+                                            android:layout_width="26dp"
+                                            android:layout_height="26dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="12dp"
+                                            android:src="@drawable/fbicon"
+                                            android:visibility="gone">
+
+
+                                        </ImageView>
+
+                                        <ImageView
+                                            android:id="@+id/iv_twitterlogin"
+                                            android:layout_width="26dp"
+                                            android:layout_height="26dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="4dp"
+                                            android:src="@drawable/twitter"
+                                            android:visibility="gone">
+
+
+                                        </ImageView>
+
+
+                                        <ImageView
+                                            android:id="@+id/iv_instagramlogin"
+                                            android:layout_width="26dp"
+                                            android:layout_height="26dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:src="@drawable/instagram"
+                                            android:visibility="gone">
+
+
+                                        </ImageView>
+
+                                        <ImageView
+                                            android:id="@+id/iv_linkdlnlogin"
+                                            android:layout_width="26dp"
+                                            android:layout_height="26dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:src="@drawable/linkdln"
+                                            android:visibility="gone">
+
+
+                                        </ImageView>
+
+                                        <ImageView
+                                            android:id="@+id/iv_tinderlogin"
+                                            android:layout_width="26dp"
+                                            android:layout_height="26dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:src="@drawable/tinder"
+                                            android:visibility="gone">
+
+
+                                        </ImageView>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <HorizontalScrollView
+                                    android:visibility="gone"
+                                    android:id="@+id/lay_parking"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="8dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:src="@drawable/ic_parking"
+                                                app:tint="@color/colorWhite" />
+
+                                            <com.production.qtickets.utils.TextviewRegular
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:gravity="center"
+                                                android:maxLines="2"
+                                                android:text="Parking"
+                                                android:textColor="@color/plane_white"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lay_no_smoking"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginRight="8dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:src="@drawable/ic_nosmoking"
+                                                app:tint="@color/colorWhite" />
+
+                                            <com.production.qtickets.utils.TextviewRegular
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:gravity="center"
+                                                android:maxLines="2"
+                                                android:text="No Smoking"
+                                                android:textColor="@color/plane_white"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lay_no_cameras"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginRight="8dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:src="@drawable/ic_nocamera"
+                                                app:tint="@color/colorWhite" />
+
+                                            <com.production.qtickets.utils.TextviewRegular
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:gravity="center"
+                                                android:maxLines="2"
+                                                android:text="Camera not Allowed"
+                                                android:textColor="@color/plane_white"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lay_fb_available"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginRight="8dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:src="@drawable/ic_foodbeverage"
+                                                android:tint="@color/colorWhite" />
+
+                                            <com.production.qtickets.utils.TextviewRegular
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:gravity="center"
+                                                android:maxLines="2"
+                                                android:text="F&amp;B\ Available"
+                                                android:textColor="@color/plane_white"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lay_is_casual_allow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginRight="8dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:src="@drawable/ic_casuals"
+                                                app:tint="@color/colorWhite" />
+
+                                            <com.production.qtickets.utils.TextviewRegular
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:gravity="center"
+                                                android:maxLines="2"
+                                                android:text="Casuals Allowed"
+                                                android:textColor="@color/plane_white"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lay_is_recommended"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:src="@drawable/ic_camera"
+                                                app:tint="@color/colorWhite" />
+
+                                            <com.production.qtickets.utils.TextviewRegular
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:gravity="center"
+                                                android:maxLines="2"
+                                                android:text="Recommended"
+                                                android:textColor="@color/plane_white"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </HorizontalScrollView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="16dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="16dp">
+
+                                <com.production.qtickets.utils.TextviewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.07"
+                                    android:singleLine="true"
+                                    android:text="SUMMARY"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                 <WebView
+                                    android:id="@+id/tv_summery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp" />
+
+
+                                <com.production.qtickets.utils.TextviewBold
+                                    android:id="@+id/tv_faqtittle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="24dp"
+                                    android:letterSpacing="0.07"
+                                    android:singleLine="true"
+                                    android:text="FAQ'S"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <com.production.qtickets.utils.TextviewRegular
+                                    android:id="@+id/tv_faqvalue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:justificationMode="inter_word"
+                                    android:text="Event Name"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="13sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/ll_venue"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:orientation="horizontal">
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Venue : "
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13sp" />
+
+                                    <com.production.qtickets.utils.TextviewRegular
+                                        android:id="@+id/tv_venue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="5dp"
+                                        android:text="date"
+                                        android:singleLine="true"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:elevation="4dp"
+                                    android:id="@+id/ll_mapview"
+                                    app:cardCornerRadius="12dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <fragment
+                                            android:id="@+id/map"
+                                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_seatingarrangement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.production.qtickets.utils.TextviewBold
+                                        android:id="@+id/tv_seetinglayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:letterSpacing="0.07"
+                                        android:singleLine="true"
+                                        android:text="@string/seatinglayout"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/plane_white"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold"
+                                        android:visibility="visible" />
+
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="180dp"
+                                        android:layout_marginTop="12dp"
+                                        android:background="@drawable/drawable_white_corner_curve">
+
+
+                                        <ImageView
+                                            android:id="@+id/iv_seatingimage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="1dp">
+
+
+                                        </ImageView>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <com.production.qtickets.utils.TextviewBold
+                                    android:id="@+id/tv_gallery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:letterSpacing="0.07"
+                                    android:singleLine="true"
+                                    android:text="gallery"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_gallery"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+                                <com.production.qtickets.utils.TextviewBold
+                                    android:id="@+id/tv_videogallery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:letterSpacing="0.07"
+                                    android:singleLine="true"
+                                    android:text="VIDEO GALLERY"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/plane_white"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_videogallery"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content">
+
+
+                                    <com.production.qtickets.utils.TextviewBold
+                                        android:layout_width="match_parent"
+                                        android:layout_marginTop="20dp"
+                                        android:id="@+id/tv_similarevent"
+                                        android:letterSpacing="0.07"
+                                        android:singleLine="true"
+                                        android:textAllCaps="true"
+                                        android:textStyle="bold"
+                                        android:text="Similar Events"
+                                        android:layout_marginStart="12dp"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/plane_white"
+                                        android:layout_height="wrap_content">
+
+
+                                    </com.production.qtickets.utils.TextviewBold>
+
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginStart="6dp"
+                                        android:id="@+id/rv_similarevent"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_height="wrap_content">
+
+
+                                    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_book_now"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/selected_tab_with_corners"
+                android:letterSpacing="0.09"
+                android:text="@string/book"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

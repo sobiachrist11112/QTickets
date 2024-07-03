@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layoutDirection="ltr">
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/backcolor">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/colorBlack"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/movie_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/iv_movie_image"
+                    android:layout_width="127dp"
+                    android:layout_height="127dp"
+                    android:layout_margin="5dp"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_movie_image"
+                    android:orientation="vertical">
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tv_movie_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Movie Name"
+                        android:layout_marginTop="@dimen/five"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/twelve" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/confirm_code"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/ten" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/tv_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:singleLine="true"
+                            android:text="123456"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/twelve" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/thertre_name"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/ten" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/tv_theater_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Asin Town"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/twelve" />
+                    </LinearLayout>
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tv_movie_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:text="16-11-2018 6.30AM"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/twelve" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:orientation="horizontal">
+
+                        <com.production.qtickets.utils.TextviewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/selct_sts"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/ten" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/tv_movie_seats"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:singleLine="true"
+                            android:text="12"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/twelve" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:visibility="gone"
+                android:layout_below="@+id/movie_item_layout"
+                android:src="@drawable/booking_history_line" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layerType="software"
+                android:layout_below="@+id/movie_item_layout"
+                android:background="@drawable/dotted_line_white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/Total_amt"
+                    android:layout_marginStart="@dimen/five"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twelve" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:text="120 QR"
+                    android:layout_marginEnd="@dimen/five"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twelve" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="145dp"
+        android:background="@drawable/movie_round_bck" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="145dp"
+        android:layout_toEndOf="@+id/r1"
+        android:background="@drawable/movie_round_bck" />
+</RelativeLayout>

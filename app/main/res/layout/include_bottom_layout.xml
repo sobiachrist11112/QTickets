@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/buttom_back"
+    android:layoutDirection="ltr"
+    android:weightSum="4"
+    android:padding="@dimen/ten">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/ll_home"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ic_home"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_home" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="wrap_content"
+            android:text="Home"
+            android:id="@+id/tv_hometittle"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/plane_white"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/ll_movies"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ic_movies"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_movies" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="wrap_content"
+            android:text="Movies"
+            android:id="@+id/tv_moviewtittle"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/plane_white"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_events"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ic_event"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_events" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="wrap_content"
+            android:text="Event"
+            android:id="@+id/tv_eventtittle"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/plane_white"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/ll_more"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/more" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="wrap_content"
+            android:text="More"
+            android:textAllCaps="true"
+            android:id="@+id/tv_more"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/plane_white"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_search_qt" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

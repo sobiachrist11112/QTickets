@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "828629057256",
+    "firebase_url": "https://qticketsandroid.firebaseio.com",
+    "project_id": "qticketsandroid",
+    "storage_bucket": "qticketsandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828629057256:android:5896708c5283dcf0",
+        "android_client_info": {
+          "package_name": "com.mobile.android.qticketsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828629057256-t0ts7gjf6e1p17smb086d5ftb1d33fqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8Rm-vhcEp6iEnfFDwD5-mLLUKizR3l1U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlack"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/include"
+        android:background="@color/colorBlack"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_now_showing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/nowshowing"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/ten" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_top_movies"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/backcolor"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/topmovies"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ten" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_coming_soon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/backcolor"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/cominsoon"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ten" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/lin_all_laung"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_language" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/txt_all_laung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alllaunguages"
+                        android:textColor="@color/buttoncolor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/buttoncolor" />
+
+                <LinearLayout
+                    android:id="@+id/lin_cinema_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_cinemas" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/txt_all_cinema"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cinemahall"
+                        android:textColor="@color/buttoncolor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/include_no_booking_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_layout"
+                android:layout_gravity="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movielist_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_layout"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:nestedScrollingEnabled="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

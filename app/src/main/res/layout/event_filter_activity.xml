@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/back_color_without_corner">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/serchBtn"
+            android:layout_toRightOf="@+id/backBtn"
+            android:gravity="center"
+            android:text="Filters"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/twenty"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/serchBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_search_qt"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:drawableEnd="@drawable/ic_search_qt"
+            android:drawableRight="@drawable/ic_search_qt"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/text_cursor_drawable"
+            android:visibility="gone"
+            app:backgroundTint="@android:color/white" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@color/colorBlack">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/backcolor"
+                android:paddingLeft="@dimen/ten">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_price" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:layout_marginStart="@dimen/ten"
+                    android:text="Price Range"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fifteen" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backcolor"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/seeklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tvMinRs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tvMaxRs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backcolor"
+                android:paddingBottom="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:paddingLeft="@dimen/ten">
+
+                <ImageView
+                    android:id="@+id/calImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/ic_calender" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/calImageView"
+                    android:text="Days"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fifteen" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/rgBookedDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/backcolor"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="@dimen/ten"
+                android:paddingTop="10dp"
+                android:weightSum="4">
+
+                <RadioButton
+                    android:id="@+id/rbAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_days"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/colordayselector"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_days"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="Today"
+                    android:textColor="@color/colordayselector"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbTomorow"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_days"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="Tomorrow"
+                    android:textColor="@color/colordayselector"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbWeekend"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_days"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="Weekend"
+                    android:textColor="@color/colordayselector"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backcolor"
+                android:layout_marginTop="@dimen/ten"
+                android:padding="@dimen/ten">
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Select a date range"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fifteen" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/backcolor"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1">
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tvStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:hint="Select start date"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvStartDate"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/five"
+                        android:src="@drawable/ic_calender" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightGray" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tvEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:hint="Select end date"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvEndDate"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/five"
+                        android:src="@drawable/ic_calender" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/two"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_marginTop="@dimen/fifteen">
+
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/agreeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/checkboxLL"
+                        android:layout_toRightOf="@+id/checkboxLL"
+                        android:text="Current Location"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <LinearLayout
+                        android:id="@+id/checkboxLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <CheckBox
+                            android:id="@+id/tickCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/tvApplyFilter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:text="Apply Filter"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

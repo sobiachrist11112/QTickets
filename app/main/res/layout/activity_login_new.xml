@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/login_bg">
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/signin"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/login_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin"
+        android:layout_centerHorizontal="true"
+        android:text="@string/logintoyouracc"
+        android:textColor="@color/black"
+        android:textSize="@dimen/forteen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/login_to"
+        android:layout_marginStart="@dimen/thirty"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_marginEnd="@dimen/thirty"
+        android:background="@drawable/sign_in_back">
+
+        <RelativeLayout
+            android:id="@+id/tl_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginTop="@dimen/fifty"
+            android:layout_marginEnd="@dimen/twenty"
+            android:background="@drawable/white_border_back"
+            >
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_signin_email"
+                android:drawablePadding="@dimen/ten"
+                android:hint="@string/signinhint"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/twenty"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/forteen" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tl_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tl_email"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginEnd="@dimen/twenty"
+            android:background="@drawable/white_border_back"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/twenty"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/forteen" />
+
+        </RelativeLayout>
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:id="@+id/tv_forgotpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tl_password"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginEnd="@dimen/twenty"
+            android:text="@string/forgotpass"
+            android:textColor="@color/white" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_forgotpassword"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginEnd="@dimen/twenty"
+            android:background="@drawable/yellow_with_corner_back"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/fifteen"
+            android:text="@string/signin"
+            android:textAllCaps="true"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/l1_or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="@dimen/twenty"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginTop="@dimen/eighteen"
+                android:layout_weight="1.5"
+                android:background="@color/white" />
+
+            <com.production.qtickets.utils.TextviewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="@dimen/fifteen"
+                android:text="@string/txt_or"
+                android:textColor="@color/white"
+                android:textSize="@dimen/twenty" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/eighteen"
+                android:layout_marginEnd="@dimen/ten"
+                android:layout_weight="1.5"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/button_facebookLogin"
+            style="@style/FacebookLoginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fourty"
+            android:layout_below="@+id/l1_or"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/twenty"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/fifteen"
+            android:paddingBottom="@dimen/fifteen"
+            android:text="@string/loginwith"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sixteen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_facebookLogin"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/donthave"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen" />
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/tv_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five"
+                android:text="@string/nav_signup"
+                android:textAllCaps="true"
+                android:textColor="@color/buttoncolor"
+                android:textSize="@dimen/sixteen" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_child"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="12dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@drawable/background_more_curve_childevent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:visibility="visible"
+            android:id="@+id/ll_withoutdata"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:id="@+id/iv_addicon"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/add"
+                android:layout_height="20dp">
+
+            </ImageView>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="2.7"
+                android:layout_marginStart="12dp"
+                android:id="@+id/tv_guestname"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="@string/adduserinfo"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/iv_deleteicon"
+                android:src="@drawable/deleteicon"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+
+            </ImageView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/background_withoutstroke"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/ll_withdata"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".8"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="12dp"
+                    android:id="@+id/tv_fullanme"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/deleteicon"
+                    android:id="@+id/iv_deleteagain"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+
+                </ImageView>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

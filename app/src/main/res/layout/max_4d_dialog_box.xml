@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/max_4d"
+    android:layoutDirection="ltr">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/txt_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/attention"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fifteen"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/max_4d"
+            app:layout_constraintBottom_toTopOf="@+id/max_4d_ok"
+            app:layout_constraintTop_toBottomOf="@+id/txt_header">
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/txt_max_4d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/max_4d"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve" />
+
+        </ScrollView>
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/max_4d_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/max_4d_ok"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/eighteen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

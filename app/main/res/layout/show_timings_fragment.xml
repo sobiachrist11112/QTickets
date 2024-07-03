@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:layoutDirection="ltr">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack"
+        android:layout_below="@+id/include"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.production.qtickets.utils.TextviewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/nooftickets"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/back_color_background"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_decrease_count"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_minus" />
+
+                <TextView
+                    android:id="@+id/tv_ticket_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_increase_count"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_plus" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/linear"
+        android:background="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@+id/linear">
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Feb 2018"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/forteen"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintTop_toBottomOf="@+id/l1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/soldout" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/sold"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/fillingfast" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/filling"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/available" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/available"
+                            android:textColor="#6ab245"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/midnight" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Mid Night"
+                            android:textColor="#7a4def"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintHorizontal_weight="1"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent">
+
+                     <ImageView
+                         android:layout_width="20dp"
+                         android:layout_height="20dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_marginEnd="5dp"
+                         android:layout_marginStart="10dp"
+                         android:layout_marginTop="10dp"
+                         android:src="@drawable/soldout" />
+
+                     <com.production.qtickets.utils.TextviewBold
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:text="@string/sold"
+                         android:textColor="@android:color/darker_gray"
+                         android:textSize="@dimen/twelve" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintHorizontal_weight="1"
+                     app:layout_constraintLeft_toLeftOf="parent"
+                     app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toTopOf="parent">
+
+                     <ImageView
+                         android:layout_width="20dp"
+                         android:layout_height="20dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_marginEnd="5dp"
+                         android:layout_marginTop="10dp"
+                         android:src="@drawable/fillingfast" />
+
+                     <com.production.qtickets.utils.TextviewBold
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:text="@string/filling"
+                         android:textColor="@android:color/holo_red_light"
+                         android:textSize="@dimen/twelve" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="10dp"
+                     android:orientation="horizontal"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_weight="1"
+                     app:layout_constraintTop_toTopOf="parent">
+
+                     <ImageView
+                         android:layout_width="20dp"
+                         android:layout_height="20dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_marginEnd="5dp"
+                         android:layout_marginTop="10dp"
+                         android:src="@drawable/available" />
+
+                     <com.production.qtickets.utils.TextviewBold
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:text="@string/available"
+                         android:textColor="#6ab245"
+                         android:textSize="@dimen/twelve" />
+                 </LinearLayout>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_date"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/backcolor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/l2">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_malls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_malls"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    android:indeterminateDrawable="@drawable/custom_progress_background" />
+                <TextView
+                    android:id="@+id/tvLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:text="Loading"
+                    android:layout_toRightOf="@+id/progress"
+                    android:textColor="@color/buttoncolor"
+                    android:layout_centerInParent="true"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tx_no_shows"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/twenty"
+                android:textColor="@color/colorWhite"
+                android:text="@string/no_show_date"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

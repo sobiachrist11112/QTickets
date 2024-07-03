@@ -1,0 +1,51 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/c2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:id="@+id/c1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/transparent_movie_category_background"
+       android:padding="@dimen/twelve">
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:gravity="center_horizontal"
+            android:text="may 29"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/thirteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/tv_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/five"
+            android:text="fri"
+            android:textSize="@dimen/thirteen"
+            android:visibility="visible"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

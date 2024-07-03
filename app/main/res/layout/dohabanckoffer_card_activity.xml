@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doha Bank Offer"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingBottom="?android:attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.production.qtickets.utils.TextviewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/dohabankoffer"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/black"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/doha_card_bg">
+
+                <ImageView
+                    android:id="@+id/iv_chipimage"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/chip" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_visa" />
+
+                <LinearLayout
+                    android:id="@+id/layout_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_chipimage"
+                    android:orientation="vertical">
+
+                    <com.alihafizji.library.CreditCardEditText
+                        android:id="@+id/textview_credit_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_field_border"
+                        android:hint="**** **** **** ****"
+                        android:inputType="textNoSuggestions"
+                        android:maxLength="19"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#929292" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_one_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_chipimage"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/card_field_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="****"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#929292" />
+
+                    <EditText
+                        android:id="@+id/et_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="****"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#929292" />
+
+                    <EditText
+                        android:id="@+id/et_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="****"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#929292" />
+
+                    <EditText
+                        android:id="@+id/et_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="****"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#929292" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_one"
+                    android:layout_marginRight="80dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="VALID"
+                            android:textColor="@color/white"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="MM/YYYY"
+                            android:textColor="@color/white"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="CVV"
+                            android:textColor="@color/white"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="THRU"
+                            android:textColor="@color/white"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <Spinner
+                                android:id="@+id/spinner_select_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/card_field_border"
+                                android:scrollbarThumbVertical="@drawable/scrollbar_style"
+                                android:spinnerMode="dropdown"
+                                android:verticalScrollbarPosition="left" />
+
+                            <Spinner
+                                android:id="@+id/spinner_select_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/card_field_border"
+                                android:scrollbarThumbVertical="@drawable/scrollbar_style"
+                                android:spinnerMode="dropdown"
+                                android:verticalScrollbarPosition="left" />
+
+                            <EditText
+                                android:id="@+id/et_validthru_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:background="@drawable/card_field_border"
+                                android:gravity="center_horizontal"
+                                android:hint="05"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="#929292"
+                                android:visibility="gone"></EditText>
+
+                            <EditText
+                                android:id="@+id/et_validthru_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:background="@drawable/card_field_border"
+                                android:gravity="center_horizontal"
+                                android:hint="22"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="#929292"
+                                android:visibility="gone"></EditText>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_validthru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="@drawable/card_field_border"
+                            android:gravity="center_horizontal"
+                            android:hint="05/2018"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="#929292"></EditText>
+
+                        <EditText
+                            android:id="@+id/et_cvvcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_field_border"
+                            android:gravity="center_horizontal"
+                            android:hint="123"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="#929292"></EditText>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_two"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_nameoncard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:background="@drawable/card_field_border"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                        android:hint="Name on the card"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#929292" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_back_with_corners"
+                android:gravity="center_horizontal"
+                android:paddingBottom="8dp"
+                android:paddingEnd="40dp"
+                android:paddingStart="40dp"
+                android:paddingTop="8dp"
+                android:text="SUBMIT"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:id="@+id/discount_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="TICKET SUMMARY"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#D5D5D5"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp">
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Total Tickets" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tv_total_tickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="2" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#D5D5D5"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp">
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Tickets after discount" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tv_tickets_after_discount"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="1" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#D5D5D5"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp">
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Tickets price" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tv_ticket_price"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="1" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#D5D5D5"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp">
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Service charges" />
+
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/tv_service_charges"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="1" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#D5D5D5"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp">
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL AMOUNT"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tv_totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="11"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/dotted_border"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/tick" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine="true"
+                        android:text="@string/offerapply"
+                        android:textColor="#469649" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/payNow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_payTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAY"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_close_button" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/login_image" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/welcome"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twenty_five"
+                    android:textStyle="bold" />
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/please"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/forteen"
+                    android:textStyle="bold" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/button_facebookLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:layout_marginEnd="@dimen/thirty"
+                    android:layout_marginStart="@dimen/thirty"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:background="@drawable/facebook_btn_bg"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/ten"
+                    android:paddingTop="@dimen/ten"
+                    android:text="@string/loginwith"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sixteen" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/donthave"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sixteen" />
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/tv_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signup"
+                        android:layout_marginStart="@dimen/five"
+                        android:textColor="@color/buttoncolor"
+                        android:textSize="@dimen/sixteen" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_inputlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:theme="@style/edit_textLabel">
+
+                    <com.production.qtickets.utils.EdittextRegular
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/username"
+                        android:textColor="@color/colorWhite"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwrod_inputlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:theme="@style/edit_textLabel"
+                    app:passwordToggleTint="@color/colorWhite"
+                    app:passwordToggleEnabled="true">
+
+                    <com.production.qtickets.utils.EdittextRegular
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:textColor="@color/colorWhite"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_forgotpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:text="@string/forgotpass"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twelve" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/by"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/twelve" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/terms"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/colorWhite"
+                            android:text=" &amp; "
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:id="@+id/privacy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/privacy"
+                            android:textColor="@color/buttoncolor"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.production.qtickets.utils.TextviewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/colorWhite"
+                            android:text="@string/qtickets"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/eighteen"
+        android:textStyle="bold" />
+</RelativeLayout>

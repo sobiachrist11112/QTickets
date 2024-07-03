@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="colorPrimary">#232324</color>
+    <color name="colorPrimary1">#232324</color>
+    <color name="colorPrimaryDark">#232324</color>
+    <color name="colorAccent">#E6B800</color>
+    <color name="color_back">#BFFFFFFF</color>
+    <color name="draw_start_color">#7f60eb</color>
+    <color name="center_color">#8787e8</color>
+    <color name="draw_end_color">#9cd7db</color>
+    <color name="transparent">#00000000</color>
+    <color name="movie_text_color">#7f62ea</color>
+    <color name="dark_brown">#1A1A1A</color>
+    <color name="grey">#A1A1A1</color>
+    <color name="btm_tab_color">#1A75BC</color>
+    <color name="white">#BFFFFFFF</color>
+    <color name="plane_white">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="backgroundWindow">#152231</color>
+    <color name="colorWhite">#BFffffff</color>
+    <color name="colorBlack">#000</color>
+    <color name="light_grey_text">#9ea0a3</color>
+    <color name="light_grey">#F1F3F4</color>
+    <color name="colorMovie">#BD0C5B</color>
+    <color name="colorSports">#D27205</color>
+    <color name="event">#D53934</color>
+    <color name="leisure">#488026</color>
+    <color name="contacttextcolor">#FF9F9D9D</color>
+    <color name="back_color">#EFF7FE</color>
+    <color name="editTextbg">#EAEAEA</color>
+    <color name="et_bg_color">#F2F2F7</color>
+    <color name="colorGray">#808080</color>
+    <color name="anotherTicket">#27a3d9</color>
+    <color name="backgroundTheatreName">#2A3039</color>
+    <color name="background_showTimes">#c4e4a4</color>
+    <color name="colorBlue">#4286f4</color>
+    <color name="tabselectedcolor">#F44336</color>
+    <color name="filter_back">#F1EFF0</color>
+    <color name="event_filter_back">#f2f2f2</color>
+    <color name="category_round_back">#685FBB</color>
+    <color name="imdb">#FFE5BC02</color>
+    <color name="moviedetailesbac">#EFF7FE</color>
+    <color name="ticketBackground">#E1E9F0</color>
+    <color name="upcoming_tab_focus">#F25A29</color>
+    <color name="upcoming_tab_light">#353E47</color>
+    <color name="detail_bg">#1D2025</color>
+    <!--booking detailes-->
+    <color name="book_header">#6A48D1</color>
+    <color name="book_ticket">#EEECEC</color>
+    <color name="blue_button">#58469C</color>
+
+    <color name="lightGray">#f2f2f2</color>
+    <color name="novo_ticket_type_back">#E9E9E9</color>
+    <color name="colorblue">#13cbe7</color>
+    <color name="fdfdf">#536163</color>
+    <color name="themecolor">#58469C</color>
+    <color name="backcolor">#141414</color>
+    <color name="buttoncolor">#E6B800</color>
+    <color name="buttomlayoutcolor">#232324</color>
+    <color name="occupied">#3D3D3F</color>
+
+
+</resources>

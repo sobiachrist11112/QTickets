@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/backcolor">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_prof_pic"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_male_user"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/camera_circle_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_prof_pic"
+        app:layout_constraintEnd_toEndOf="@+id/img_prof_pic">
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_photo_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/c1"
+            app:layout_constraintLeft_toLeftOf="@+id/c1"
+            app:layout_constraintRight_toRightOf="@+id/c1"
+            app:layout_constraintTop_toTopOf="@+id/c1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/name"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/fifteen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c1" />
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_black_email"
+        android:text="@string/email"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/fifteen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:theme="@style/edit_textLabel"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:hint="@string/name"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/fifteen" />
+
+        <View
+            android:id="@+id/UnderLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/edt_rep_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorWhite" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:theme="@style/edit_textLabel"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_name">
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="@string/youremail"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/fifteen" />
+
+        <View
+            android:id="@+id/UnderLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/edt_rep_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorWhite" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spin_country_code"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:backgroundTint="@color/colorWhite"
+        android:popupBackground="@color/backcolor"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_email" />
+
+    <!--<com.hbb20.CountryCodePicker-->
+    <!--android:id="@+id/spin_country_code"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="20dp"-->
+    <!--android:layout_marginStart="12dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--app:layout_constraintHorizontal_weight="0.5"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txt_input_email"-->
+    <!--/>-->
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/colorGray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_country_code" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:theme="@style/edit_textLabel"
+        app:hintEnabled="false"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintLeft_toRightOf="@+id/spin_country_code"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_email">
+
+        <EditText
+            android:id="@+id/edt_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:hint="@string/enterphoneno"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/fifteen" />
+
+        <View
+            android:id="@+id/UnderLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/edt_rep_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner_nationality"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:popupBackground="@color/backcolor"
+        app:layout_constraintTop_toBottomOf="@+id/spin_country_code" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_gray_down_arrow"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_country_code" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_nationality" />
+
+    <com.production.qtickets.utils.TextviewBold
+        android:visibility="gone"
+        android:id="@+id/change_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/change_password"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sixteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="10dp"
+        android:text="@string/savechanges"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sixteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

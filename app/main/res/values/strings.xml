@@ -1,0 +1,570 @@
+<resources>
+    <string name="app_name">Q-Tickets</string>
+
+    <!--<string name="facebook_app_id">794528510755077</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb794528510755077</string>-->
+
+    <!-- <string name="fb_testing_app_id">2112031845717000</string>-->     <!--Qtickets 3.0-->
+    <string name="fb_testing_app_id">1784746141742357</string>     <!--Qtickets 2.0-->
+
+
+    <string name="fb_testing_login_protocal">fb2112031845717000</string>
+    <!--<string name="facebook_app_id">1784746141742357</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb794528510755077</string>-->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="loading">Loading.........</string>
+    <string name="internet">Check your Internet connection</string>
+    <string name="noresponse">We are unable to communicate with Server right now, Please try after some time..</string>
+    <string name="ok">OK</string>
+    <string name="terms">Terms &amp; Conditions</string>
+    <string name="about">About Us</string>
+    <string name="version">Version</string>
+
+    <!--login-->
+    <string name="login_succ">Sign in Successful</string>
+
+    <!--contactus-->
+    <string name="email">Email</string>
+    <string name="info">info@q-tickets.com</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message*</string>
+    <string name="emailid">Email ID*</string>
+    <string name="phone">Phone</string>
+    <string name="name">Name*</string>
+    <!--    <string name="phone_number">+974-44069090</string>-->
+    <string name="phone_number">+974-44661996</string>
+    <string name="phone_number_dubai">+971508890218</string>
+
+    <!--navigation-->
+    <string name="nav_myaccount">My Account</string>
+    <string name="nav_mybook">My Bookings</string>
+    <string name="nav_contactus">Contact Us</string>
+    <string name="nav_notification">Notifications</string>
+    <string name="nav_newsfeed">News Feed</string>
+    <string name="nav_rateus">Rate Us</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_tc">Terms and Conditions</string>
+    <string name="faqs">FAQ</string>
+    <string name="privacyandpolicy">Privacy Policy</string>
+    <string name="privacypolicy">Privacy Policy</string>
+    <string name="logout">Sign out</string>
+    <string name="share_title">Buy movie,event tickets, check Movie show timings, showtimes, schedule, reviews, news. You can also book tickets for Events, Plays, Sports, Theater, Music concerts &amp; Film festivals.</string>
+
+    <!--categories-->
+    <string name="explore">Explore Categories</string>
+    <string name="movies">MOVIES</string>
+    <string name="events">EVENTS</string>
+    <string name="sports">SPORTS</string>
+    <string name="leisure">LEISURE</string>
+    <string name="s_Movies">Movies</string>
+    <string name="Seeall">See All</string>
+    <string name="s_Events">Events</string>
+
+    <!--events-->
+    <string name="t_new">NEW</string>
+    <string name="book">BOOK NOW</string>
+    <string name="filters">FILTERS</string>
+    <string name="venues">VENUES</string>
+
+    <!--login-->
+    <string name="welcome">Welcome</string>
+    <string name="please">Enter the world of endless entertainment</string>
+    <string name="foryour">For Your Night!</string>
+    <string name="loginwith">Sign in with Facebook</string>
+    <string name="donthave">Don\'t have an account ? </string>
+    <string name="signup">  Sign up</string>
+    <string name="nav_signup">Sign up</string>
+    <string name="nav_login">Sign in /</string>
+    <string name="username">Username</string>
+    <string name="password">Password *</string>
+    <string name="confpassword">Confirm Password *</string>
+    <string name="forgotpass">Forgot Your Password ?</string>
+    <string name="by">By sign in, you agree to the</string>
+    <string name="qtickets"> of Q-Tickets</string>
+    <string name="login">SIGN IN</string>
+    <string name="alert">You are not Sign-in, please Sign in to add your review</string>
+    <string name="alert_cov_en">Following the instructions of the Supreme Committee for Crisis Management
+regarding the implementation of the new precautionary measures to limit the
+spread of Covid-19 virus, please note that unvaccinated people are
+not allowed to enter the cinemas. Children below 12 years old are allowed in
+The Pearl and Souq Waqif Novo Cinemas only.</string>
+    <string name="alert_cov_en_t">DEAR GUESTS,</string>
+    <string name="alert_cov_ar_t">ضيوالكرام,</string>
+    <string name="alert_cov_ar">بناء على توجيهات اللجنة العليا لإدارة الأزمات بشان تطبيق الإجراءات الاحترازية الجديدة الخاصة بمواجهة الحد من انتشار فيروس كوفيد. 19يرجى العلم بأنه لن يسمح بدخول الأشخاص الغير محصنين  كما يسمح للأطفال اللذين تبلغ أعمارهم من 12  عامة وما دون من دخول دور السينما فقط في اللؤلؤة وسوق واقف</string>
+    <string name="login_alert">Sign in Required</string>
+
+    <!--navigation-->
+    <string name="loginorregis">Sign in</string>
+    <string name="guest">Welcome Guest</string>
+
+    <!--sports-->
+    <string name="s_sports">Sports</string>
+    <string name="s_liesure">Leisure</string>
+
+    <!--seatinglayout-->
+    <string name="date">seleteddate</string>
+    <string name="mall">selectedmall</string>
+
+    <string name="booking_details">Booking Details</string>
+    <string name="select_payment">Select Payment</string>
+    <string name="name_filter">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz</string>
+    <string name="voucher_filter">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</string>
+
+    <string name="dohabankoffer">DOHA BANK CARD DETAILS</string>
+
+    <string name="paynow">Pay Now</string>
+    <string name="screen">SCREEN</string>
+
+    <!--Movies-->
+    <string name="nowshowing">NOW SHOWING</string>
+    <string name="topmovies">TOP MOVIES</string>
+    <string name="cominsoon">COMING SOON</string>
+    <string name="watch">Watch Trailer</string>
+
+    <!--filter-->
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="filter">Filters</string>
+    <string name="price">Price Range</string>
+    <string name="days">Days</string>
+    <string name="all">All</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="weekend">Weekend</string>
+    <string name="select">Select a date range</string>
+    <string name="apply">Apply Filter</string>
+    <string name="startdate">Select start date</string>
+    <string name="enddate">Select end date</string>
+    <string name="min">Min QAR.</string>
+    <string name="max">Max QAR.</string>
+
+    <!--myprofile-->
+    <string name="youremail">Email</string>
+    <string name="enterphoneno">Enter Phone Number</string>
+    <string name="savechanges">SAVE CHANGES</string>
+    <string name="myprofile">MY PROFILE</string>
+    <string name="crop">your device doesn\'t support the crop action!</string>
+    <string name="action">Select Action</string>
+    <string name="photo">Select Photo From Gallery</string>
+    <string name="capture">Capture Photo From Camera</string>
+    <string name="wantto">Do you want to update profile picture ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="v_name">Please Enter Name</string>
+    <string name="v_email">Please Enter Email</string>
+    <string name="v_country">Please Select Country Code</string>
+    <string name="v_national">Please Select Nationality</string>
+    <string name="v_number">Please Enter Mobile Number</string>
+    <string name="validphonenumber">Please Enter Valid  Mobile Number</string>
+    <string name="inmobile">Invalid Mobile Number</string>
+    <string name="invalidemail">Invalid Email Address</string>
+    <string name="change_password">Change Password?</string>
+
+    <!--    mybooking-->
+    <string name="confirm_code">Confirmation Code:</string>
+    <string name="thertre_name">Theatre Name</string>
+    <string name="selct_sts">Select Seats:</string>
+    <string name="Total_amt">Total Amount:</string>
+
+    <!--contact us-->
+    <string name="valid_name">Please Enter Name</string>
+    <string name="valid_subject">Please Enter Subject</string>
+    <string name="valid_message">Please Enter Message</string>
+    <string name="error">Something went wrong</string>
+
+    <!--Movie detailes-->
+    <string name="c_share">SHARE</string>
+    <string name="user_registered_succ">User registered successfully</string>
+    <string name="successwewill">Success! We will get back to you as soon as we can.</string>
+    <string name="show">SHOW TIMINGS</string>
+    <string name="summary">SUMMARY</string>
+    <string name="reviews">USER REVIEWS</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="sold">Sold Out</string>
+    <string name="available">Available</string>
+    <string name="filling">Filling Fast</string>
+    <string name="noshows">No Shows Available</string>
+    <string name="yourrating">YOUR RATING</string>
+    <string name="reviewtitle">REVIEW TITLE</string>
+    <string name="highlight">Highlight what you particularly liked</string>
+    <string name="txt_continue">CONTINUE</string>
+    <string name="nooftickets">Select No. of Tickets</string>
+    <string name="see">See</string>
+    <string name="share">Share</string>
+    <string name="alllaunguages">All Languages</string>
+    <string name="cinemahall">All Cinemas</string>
+    <string name="c_submit">SUBMIT</string>
+    <string name="e_rating">Please Add Ratings</string>
+    <string name="e_re_title">Please Add Review Title</string>
+    <string name="e_re_summ">Please Add Review Summary</string>
+    <string name="re_success">Thank you for your reviews</string>
+    <string name="re_error">Sorry There is an problem with uploading reviews try later</string>
+
+    <!--sign up-->
+    <string name="alredy">Already have an account ? </string>
+    <string name="repeat">Confirm Password</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="of">of Q-Tickets</string>
+    <string name="c_signup">SIGN UP</string>
+
+    <!--  login-->
+    <string name="pass_valid">Please enter password</string>
+    <string name="username_valid">Please enter Email ID</string>
+    <string name="enterphone_number">Please enter Phone Number</string>
+    <string name="username_valid1">Please enter valid Email ID</string>
+    <string name="invalid">Invalid Credentials</string>
+    <string name="forgot">Please Enter Your Email Address</string>
+    <string name="submit">Submit</string>
+    <string name="forgotpassword">Forgot Password</string>
+
+    <!-- chagePassword-->
+    <string name="current_pass">Current Password</string>
+    <string name="new_pass">New Password</string>
+    <string name="confirm_ass">Confirm Password</string>
+
+    <!--Event details-->
+    <string name="event_details">EVENT DETAILS</string>
+    <string name="tickets">BOOK TICKETS</string>
+    <string name="event_summary">ABOUT EVENT</string>
+    <string name="event_contact">CONTACT</string>
+    <string name="book_ticket_now">BOOK TICKETS NOW</string>
+    <string name="noOfGuests">No. of Guests</string>
+    <string name="totalAmount">Total Amount</string>
+    <string name="payNow">PAY NOW</string>
+    <string name="allEvents">ALL EVENTS</string>
+    <string name="thisWeek">THIS WEEK</string>
+    <string name="thisMonth">THIS MONTH</string>
+    <string name="allEvents_">All Events</string>
+    <string name="thisWeek_">This Week</string>
+    <string name="thisMonth_">This Month</string>
+    <string name="selectDate">Select Date</string>
+    <string name="userDetails">User Details</string>
+    <string name="proceedToPayment">Proceed To Payment</string>
+
+    <string name="maps_api_key">AIzaSyDxfGgOkVDsFW_4qh4MVomz5a7fjz0i5mI</string>
+
+    <!--  movieseat-->
+    <string name="edit_ticket">How Many Seats?</string>
+
+    <!--bookingdatiales-->
+    <string name="review">Review Your Ticket</string>
+    <string name="ticket_cost">Ticket Cost</string>
+    <string name="no_of_tickets">Number Of Tickets</string>
+    <string name="proceed">Proceed</string>
+    <string name="total_price">Total Price</string>
+    <string name="service">Service Charges</string>
+    <string name="total_payment">Total Payable Amount</string>
+    <string name="or">(OR)</string>
+    <string name="iaccept">I accept to the </string>
+    <string name="pay">Pay</string>
+    <string name="voucher">e-Voucher Code</string>
+    <string name="c_apply">APPLY</string>
+    <string name="seat_empty">Select at least one seat to proceed</string>
+    <string name="coponcode">Your Coupon Code Applied Successfully With Amount of</string>
+    <string name="invalidcode">Invalid Coupon Code</string>
+    <string name="e_code">Please enter valid code</string>
+    <string name="bookingdetaile">Booking Details</string>
+    <string name="events_terms_condition">1. Once the tickets are confirmed it is deemed as sold and as per the cinema regulations, once a ticket has been paid for, it cannot be refunded replaced or cancelled or changed/transferred. \n2.Ticket prices are applicable for children from 2 years and above. \n
+        3.Reserved seats cannot be transferred or changed. \n
+        4.Q-Tickets guarantee the absolute privacy and confidentiality of its users\' personal information. \n
+        5.Q-Tickets only role is to facilitate the online reservation process. We are neither responsible nor accountable for the theater\'s services. \n
+        6.By agreeing to the terms and conditions, you are verifying that all the personal information is valid and accurate, and that you bear all legal responsibility for it. \n
+        7.Q-Tickets is not responsible for the movies ratings.Theatre owner has right to access permission.\n\n1.حالما يتم تأكيد التذاكر تعتبر قد بيعت وحيث ينص قانون السينيما، حينما يتم دفع ثمن التذاكر فأنه من غير الممكن استبدالها أو إرجاعها أو حتى إلغائها.2\n2.الأسعار قابلة للتطبيق للأطفال من سن 2 فما فوق.\n3.المقاعد المحجوزة لا يمكن تغييرها أو نقلها.\n4.Q-tickets تضمن السريه والخصوصية التامه للمعلومات الشخصية لمستخدميها.\n5.Q-tickets دورها الاساسي والوحيد هو الحجز عبر الأنترنت، ونحن غير مسؤولين عن خدمات القاعة.\n6.عبر الموافقة على الشروط والأحكام فأنك تعطي الحق بإستخدام المعلومات الشخصيه بشكل قانوني.\n7.Q-tickets غير مسؤولة عن تقييم الفلم، مالك القاعه هو فقط من لديه الصلاحيه لذلك.
+    </string>
+    <string name="check_terms">Please Agree Terms and Conditions to Continue</string>
+    <string name="e_ticket_count">Please select Number of Tickets</string>
+    <string name="seatnumber">Seat Number</string>
+    <string name="starring">STARRING</string>
+    <string name="time_out">Selected time is sold out.Please select other time to continue</string>
+    <string name="to">to</string>
+    <string name="selectdate">Please Select Date</string>
+    <string name="ev_er_msg">Sorry Unable to book ticket</string>
+    <string name="url">www.q-tickets.com</string>
+    <string name="p_success">Profile Updated Successfully</string>
+    <string-array name="ticket_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!--payment-->
+    <string name="payment_time">Remaining Time :</string>
+    <string name="visa">CREDIT CARD</string>
+    <string name="ams">AMERICAN EXPRESS</string>
+    <string name="doha">DOHA BANK</string>
+    <string name="naps">NAPS( Debit Card )</string>
+    <string name="paypal">PayPal</string>
+    <string name="pay_title">SELECT PAYMENT</string>
+    <string name="nationlity">Please Select Nationality</string>
+    <string name="payment_vallid">Please Select Payment Type</string>
+
+    <string name="offerapply">Your discount has successfully applied</string>
+
+    <string-array name="purpose_array">
+        <item>For content (Movie details, trailers) enquiries</item>
+        <item>For Business enquiries</item>
+        <item>For Media/Press  enquiries</item>
+        <item>Want us to sell tickets for you event</item>
+    </string-array>
+
+    <string-array name="countries_array">
+        <item>Select Nationality</item>
+        <item>India</item>
+        <item>Qatar</item>
+        <item>Philippines</item>
+        <item>Egypt</item>
+        <item>Sri Lanka</item>
+        <item>Omani</item>
+        <item>Bahraini</item>
+        <item>Afghan</item>
+        <item>Albanian</item>
+        <item>Algerian</item>
+        <item>Argentine</item>
+        <item>Argentinian</item>
+        <item>Australian</item>
+        <item>Austrian</item>
+        <item>Bangladeshi</item>
+        <item>Belgian</item>
+        <item>Bolivian</item>
+        <item>Batswana</item>
+        <item>Brazilian</item>
+        <item>Bulgarian</item>
+        <item>Cambodian</item>
+        <item>Cameroonian</item>
+        <item>Canadian</item>
+        <item>Chilean</item>
+        <item>Chinese</item>
+        <item>Colombian</item>
+        <item>Costa Rican</item>
+        <item>Croatian</item>
+        <item>Cuban</item>
+        <item>Czech</item>
+        <item>Danish</item>
+        <item>Dominican</item>
+        <item>Ecuadorian</item>
+        <item>Salvadorian</item>
+        <item>English</item>
+        <item>Estonian</item>
+        <item>Ethiopian</item>
+        <item>Fijian</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Ghanaian</item>
+        <item>Greek</item>
+        <item>Guatemalan</item>
+        <item>Haitian</item>
+        <item>Honduran</item>
+        <item>Hungarian</item>
+        <item>Icelandic</item>
+        <item>Indian</item>
+        <item>Indonesian</item>
+        <item>Iranian</item>
+        <item>Iraqi</item>
+        <item>Irish</item>
+        <item>Israeli</item>
+        <item>Italian</item>
+        <item>Jamaican</item>
+        <item>Japanese</item>
+        <item>Jordanian</item>
+        <item>Kenyan</item>
+        <item>Kuwaiti</item>
+        <item>Lao</item>
+        <item>Latvian</item>
+        <item>Lebanese</item>
+        <item>Libyan</item>
+        <item>Lithuanian</item>
+        <item>Malaysian</item>
+        <item>Malian</item>
+        <item>Maltese</item>
+        <item>Mexican</item>
+        <item>Mongolian</item>
+        <item>Moroccan</item>
+        <item>Mozambican</item>
+        <item>Namibian</item>
+        <item>Nepalese</item>
+        <item>Dutch</item>
+        <item>New Zealand</item>
+        <item>Nicaraguan</item>
+        <item>Nigerian</item>
+        <item>Norwegian</item>
+        <item>Pakistani</item>
+        <item>Panamanian</item>
+        <item>Sudan</item>
+        <item>Peruvian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Saudi</item>
+        <item>Scottish</item>
+        <item>Senegalese</item>
+        <item>Serbian</item>
+        <item>Singaporean</item>
+        <item>Slovak</item>
+        <item>South African</item>
+        <item>Korean</item>
+        <item>Spanish</item>
+        <item>Sudanese</item>
+        <item>Swedish</item>
+        <item>Swiss</item>
+        <item>Syrian</item>
+        <item>Taiwanese</item>
+        <item>Tajikistani</item>
+        <item>Thai</item>
+        <item>Tongan</item>
+        <item>Tunisian</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Emirati</item>
+        <item>British</item>
+        <item>American</item>
+        <item>Uruguayan</item>
+        <item>Venezuelan</item>
+        <item>Vietnamese</item>
+        <item>Welsh</item>
+        <item>Zambian</item>
+        <item>Zimbabwean</item>
+    </string-array>
+
+    <string name="changepwdTitle">CHANGE PASSWORD</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="v_current_pass">Enter the current password</string>
+    <string name="v_new_pass">Enter the New password</string>
+    <string name="v_confir_pass">Enter the confirm password</string>
+    <string name="v_same_pass">Enter the Same password</string>
+    <string name="v_userid">User_ID:</string>
+    <string name="v_sess_password">SessionPassword:</string>
+    <string name="bha">bhPassword:</string>
+    <string name="e_no_of_tickets">Please edit the No of tickets to select more seats</string>
+    <string name="e_pay_now">Please select remaining seats</string>
+    <string name="e_pay_now2">Select Seats to Book</string>
+    <string name="no_bookings">No past bookings available</string>
+    <string name="seats">Seats</string>
+    <string name="Seat">Seat</string>
+    <string name="C_pay">PAY</string>
+
+
+    <string name="search_hint">Search</string>
+
+    <string name="no_movies">NO MOVIES AVAILABLE</string>
+    <string name="no_events">NO EVENTS AVAILABLE</string>
+    <string name="no_sports">NO SPORTS AVAILABLE</string>
+    <string name="no_business">NO BUSINESS AVAILABLE</string>
+    <string name="no_leisure">NO LEISURES AVAILABLE</string>
+
+    <string name="e_login_myprofile">You are not sign-in, please sign in to view your profile details</string>
+    <string name="e_login_booking">You are not sign-in, please sign in to view your booking details</string>
+    <string name="warning">Warning!</string>
+    <string name="w_family_seat">These seats are reserved for family audience,Please select other seats if you are booking for non-family audience. The supervisor reserves the right to reject admission if you are not a family</string>
+    <string name="txt_tickets">TICKETS</string>
+    <string name="txt_ticket">TICKET</string>
+    <string name="showexpired">Show Expired</string>
+<!--    <string name="googleMapsKey">AIzaSyAeB4reCznsrXNU5JJtqkiHyeNUp7g7OLU</string>-->
+    <string name="googleMapsKey">AIzaSyB3-bOOe4-hHhpv8XEHZtoILu4zGWNMzAQ</string>
+    <string name="detailesreqired">Detailes Reqired</string>
+    <string name="timeout">Time Out</string>
+    <string name="a_copon_code_su">Already you have applied your coupon code Successfully</string>
+    <string name="selecttickettype">SELECT TICKET TYPE</string>
+    <string name="notrailerurl">No Trailer URL for this Movie </string>
+    <string name="novonooftickets">No. of Tickets</string>
+    <string name="novonoofticket">Number of Ticket</string>
+    <string name="persons">Persons</string>
+    <string name="person">Person</string>
+    <string name="no_of_seat">NO. OF SEAT</string>
+    <string name="no_of_seats">NO. OF SEATS</string>
+    <string name="novosession">We are unable to communicate with Cinema Server right now, Please try after some time..</string>
+    <string name="vipseat">Please note that each VIP ticket in this particular cinema is for a single sofa that can accommodate two person only. </string>
+    <string name="attention">Disclaimer</string>
+    <string name="max_4d">1.Throughout the movie your seat will move with the action on screen.\n 2.Please remain seated with your feet on top of the footrest during the entire movie.\n 3.If you need to get in or out of your seat, please exercise caution and care as your seat and the seats around you may be moving.\n 4.You must be at least 40” tall and be able to sit and support yourself to enjoy this experience.\n 5.Please only 1 person per seat, no lap sitting allowed.\n 6.This experience may not be appropriate for people who may be pregnant, have heart, back, head, leg, or neck conditions, or other physical limitations, or those that may have reactions to scents, fog, or strobe lighting effects.\n  If you have any questions or concerns about this MX4D® Motion EFX Theatre, please contact theatre management staff before the movie begins\n\n1.خلال الفعالية سوف يتحرك المقعد مع رد فعل الشاشة.\n2.الرجاء البقاء جالسا مع وضع القدم في المكان المخصص لوضع القدمين مع تأثير الشاشة.\n3.إذا أردت الجلوس أو الخروج من المقعد الرجاء اتباع التعليمات والانتباه حيث المقعد قد يكون متحركا ً أو المقاعد المحيطه به قد تكون تتحرك.\n4.يجب أن يكون طولك على الأقل 40 إنش حيث يمكنك الجلوس ومساعدة نفسك حتى تستطيع الاستمتاع بالفلم.\n5.الرجاء الالتزام بشخص واحد فقط لكل مقعد، ممنوع حمل الاطفال\n6.التجربة قد تكون غير ملائمة للحوامل، المصابين بأمراض القلب، الظهر، الرأس، الساق، أو العنق، بالاضافة إلى الحركات الجسدية المحدودة ، أو لأولئك الذين لهم رد فعل ضد الروائح، البخار أو التأثيرات الضوئية .أذا كان لديك أي سؤال أو استفسار بخصوص عرض MX4D  المسرحي الرجاء التواصل مع طاقم الأدارة قبل بدء الفلم.</string>
+    <string name="max_4d_ok">OK</string>
+    <string name="b_Tickets">Tickets</string>
+
+    <string name="luncher">launcher:</string>
+    <string name="note">This is a midnight session starting next day morning</string>
+
+
+    <string name="country_dubai">Dubai</string>
+    <string name="country_qatar">Qatar</string>
+
+    <string name="txt_serch_hint">Search Movies, Events, Sports, Leisure</string>
+    <string name="no_show_date">No shows available for selected date</string>
+    <string name="no_show_time">No bookings available for selected time</string>
+    <string name="no_results_found">No results found</string>
+    <string name="soldout">SOLD OUT</string>
+    <string name="send">SEND</string>
+    <string name="call">CALL</string>
+    <string name="register">Register</string>
+    <string name="n_error_msg">Sorry! You can choose a maximum of only 20 seats per transaction</string>
+    <string name="n_ticket_type_error">You can select a single ticket type</string>
+    <string name="e_novo_seating">Currently No tickets Available for the selected ticket type</string>
+    <string name="servererror">Server Error</string>
+    <string name="selectseats">Select Seats</string>
+    <string name="paymentsummary">Payment Summary</string>
+    <string name="signin">Sign in</string>
+    <string name="logintoyouracc">Sign in to your account</string>
+    <string name="signinhint">Email Id</string>
+    <string name="txt_or">or</string>
+    <string name="fbtext">Continue with Facebook</string>
+    <string name="signuptxt">Create a new account</string>
+    <string name="iagree">I agree to the</string>
+    <string name="txt_mobil">Mobile Number</string>
+    <string name="masterpass">Introducing soon*</string>
+    <string name="edit_note">children 2 years and above requires a ticket.</string>
+    <string name="pg15_txt"> </string>
+    <string name="addtocalender">Add to Calendar</string>
+    <string name="adduserinfohere">Add User Info Here</string>
+    <string name="thisweekss">This Weekend</string>
+    <string name="restore">Restore</string>
+    <string name="close">Close</string>
+    <string name="nofilterapplied">No Filter Applied</string>
+    <string name="adduserinfo">Add Guest Info</string>
+    <string name="couponcode">Coupon Code</string>
+    <string name="promocode">Promo Code</string>
+    <string name="followus">Follow Us :</string>
+    <string name="selected_date">Select \nDate</string>
+    <string name="seatinglayout">SEATING LAYOUT</string>
+    <string name="pleaseentefields">Please enter Name, Email &amp; Mobile number to complete transaction. </string>
+    <string name="nofilechoosen">No file chosen</string>
+    <string name="phonenumbercontent">Phone Number</string>
+    <string name="orconituewith">Or Continue With</string>
+    <string name="deleteaccount">Delete Account</string>
+    <string name="messagefordeleteaccount">Are you sure you want to delete your account permanently? Deleted account data can\'t be recovered in future…!!!</string>
+    <string name="deleteaccountconfirmation">Delete Account Confirmation</string>
+    <string name="deletesucessfully">Your account was deleted successfully. All your data was removed from our services. Thank you for using Q-Tickets.</string>
+    <string name="remove">Remove</string>
+    <string name="addticket">ADD TICKET</string>
+    <string name="signout">Sign Out</string>
+    <string name="alerttosingout">Alert</string>
+    <string name="onceyoudelete">Once you delete your account, there is no going back. Please be certain.</string>
+    <string name="dateofbirth">Date of birth</string>
+    <string name="gender">Gender</string>
+    <string name="resetpassword">RESET PASSWORD</string>
+    <string name="resetpasswords">Reset Password?</string>
+    <string name="resetmessage">Your new password must be \n different to the previously used \n passwords</string>
+    <string name="yourpasswordis">Your password has been \n sucessfully reset .</string>
+    <string name="forgotpasswordwith">Forgot Password?</string>
+    <string name="forgotpasswordmessage">Do not worry! We will send you \n reset instruction</string>
+    <string name="enterotp">Enter OTP</string>
+    <string name="confirmnewpassword">Confirm New Password</string>
+    <string name="didntreceive">Didn\'t received email?</string>
+    <string name="clicktoresend">Click to resend</string>
+    <string name="passwordsend">We sent a password reset OTP to</string>
+    <string name="enternewpassword">Please enter the new password </string>
+    <string name="enternconfirmpassword">Please enter the confirm password </string>
+    <string name="doesnotmatch">New Password does\'nt match with the confirm password.</string>
+
+</resources>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll_root"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@drawable/unselected_button_with_corners"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="4"
+                android:layout_marginLeft="6dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/text_ticket_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/text_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/text_actual_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:layout_marginLeft="6dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lay_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/txt_minbuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp" />
+
+
+<!--                    <com.production.qtickets.utils.TextviewRegular-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:text="Discount : "-->
+<!--                        android:textColor="@color/colorWhite"-->
+<!--                        android:textSize="13sp" />-->
+
+<!--                    <com.production.qtickets.utils.TextviewRegular-->
+<!--                        android:id="@+id/text_discount"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textColor="@color/leisure"-->
+<!--                        android:textSize="13sp" />-->
+                </LinearLayout>
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/txt_buyonegetone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/text_sold_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/event"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_marginRight="12dp"
+                android:text="Sold Out"
+                android:visibility="gone"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/lay_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="6"
+                android:layout_marginRight="12dp"
+                android:gravity="right"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btn_remove"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:background="@drawable/add_remove_button_with_cornner"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/img"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:background="@drawable/add_remove_button_with_cornner"
+                        android:src="@drawable/ic_remove"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+
+                <com.production.qtickets.utils.TextviewBold
+                    android:id="@+id/tv_count"
+                    android:layout_width="42dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/img"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/btn_add"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:background="@drawable/add_remove_button_with_cornner"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="2dp"
+                        android:background="@drawable/add_remove_button_with_cornner"
+                        android:src="@drawable/ic_add"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_ticket_field_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           />
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/ll_childcontainer"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

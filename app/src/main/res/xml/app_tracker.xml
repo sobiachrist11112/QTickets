@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!--  The property id associated with this analytics tracker -->
+    <string name="ga_trackingId">UA-124072497-1</string>
+
+    <string name="ga_sampleFrequency">100.0</string>
+
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <screenName name="com.production.qtickets.login.LoginActivity">Login page</screenName>
+    <screenName name="com.production.qtickets.signup.SignUpActivity">Signup page</screenName>
+    <screenName name="com.production.qtickets.dashboard.DashBoardActivity">Dashboard page</screenName>
+    <screenName name="com.production.qtickets.activity.MainActivity">Main page</screenName>
+    <screenName name="com.production.qtickets.moviedetailes.MovieDetailsActivity">Moviedetaile page</screenName>
+    <screenName name="com.production.qtickets.moviedetailes.ShowTimingActivity">ShowTiming page</screenName>
+    <screenName name="com.production.qtickets.movies.seatselection.SeatSelectionActivity">Seatseection page</screenName>
+    <screenName name="com.production.qtickets.ticketbookingdetaile.BookingDetaileActivity">MovieTicketbookingdetailes page</screenName>
+    <screenName name="com.production.qtickets.payment.PaymentActivity">Payment page</screenName>
+    <screenName name="com.production.qtickets.events.EventDetails.EventDetailsActivity">EventDetaile page</screenName>
+    <screenName name="com.production.qtickets.events.EventDetails.EventTicketsActivity">EventTicket page</screenName>
+    <screenName name="com.production.qtickets.ticketbookingdetaile.EventBookingDetailsActivity">EventTicketbookingdetailes page</screenName>
+    <screenName name="com.production.qtickets.searchList.SearchListActivity">Search page</screenName>
+    <screenName name="com.production.qtickets.myprofile.MyProfile">Myprofile page</screenName>
+    <screenName name="com.production.qtickets.notifications.MyNotificationActivity">Notification page</screenName>
+    <screenName name="com.production.qtickets.novocinema.NovoTicketSelectionActivity">NovoTicketselection page</screenName>
+    <screenName name="com.production.qtickets.novocinema.seatinglayout.NovoSeatingLayoutActivity">NovoSeatselection page</screenName>
+    <screenName name="com.production.qtickets.novoticketconfirmation.NovoTicketConfirmationActivity">NovoTicketConfirmation page</screenName>
+    <screenName name="com.production.qtickets.ticketconfirmation.TicketConfirmationActivity">TicketConfirmation page</screenName>
+    <screenName name="com.production.qtickets.events.EventDetails.EventWebviewActivity">Event Web View Page</screenName>
+    <!--
+      See Project Structure -> Analytics -> Google Analytics -> Learn More
+      to learn more about configuring this file.
+    -->
+</resources>

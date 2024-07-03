@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@color/blue_button"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Display the text of the selected item -->
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_toStartOf="@+id/tickIcon"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/white" />
+
+    <!-- Add your white tick icon here -->
+    <ImageView
+
+        android:id="@+id/tickIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="2dp"
+        android:src="@drawable/check" />
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:weightSum="3"
+        android:layout_height="48dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:id="@+id/iv_back"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_height="18dp">
+
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/tv_tittle"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@color/plane_white"
+            android:layout_height="match_parent">
+
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="18dp"
+                android:id="@+id/iv_share"
+                android:src="@drawable/ic_share_sec"
+                android:layout_gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_height="18dp">
+
+
+            </ImageView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webViewforyoutube"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

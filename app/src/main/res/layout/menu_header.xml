@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="126dp"
+    android:background="#1A1A1A"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:id="@+id/rl_profile"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/black_circle_drawable"
+        android:layout_marginStart="12dp"
+        android:layout_height="70dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/qticketsicon" />
+
+    </RelativeLayout>
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/rl_profile"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/eighteen"
+        android:textStyle="bold" />
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/rl_profile"
+        android:text="@string/nav_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/forteen"
+        android:textStyle="bold" />
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/txt_login"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        android:textSize="@dimen/forteen" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_close" />
+
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_login"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/rl_profile"
+        android:text="@string/signout"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sixteen" />
+
+</RelativeLayout>

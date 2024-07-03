@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:id="@+id/tv_all_events"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selected_tab_with_corners"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/allEvents_"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:id="@+id/tv_this_week"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/unselected_button_with_corners"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/thisWeek_"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:id="@+id/tv_this_month"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/unselected_button_with_corners"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/thisMonth_"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_rootfilterview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nofilterapply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/book_now_button_with_bottom_cornner"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/nofilterapplied"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/ll_filterapplied"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8">
+
+                    <LinearLayout
+                        android:id="@+id/ll_filtercontainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/iv_closefilter"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight=".2"
+                    android:src="@drawable/ic_close">
+
+                </ImageView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/event_list_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="124dp"
+            android:nestedScrollingEnabled="false">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:id="@+id/tv_field_title"
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Prefix"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:text="*"
+            android:id="@+id/tv_mandatorytext"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/event"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+    </LinearLayout>
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/field_et_cornner"
+        android:paddingLeft="8dp"
+        android:id="@+id/rl_media"
+        android:paddingRight="8dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:layout_height="42dp">
+        
+        
+        <com.production.qtickets.utils.TextviewRegular
+            android:layout_width="match_parent"
+            android:text="Choose File"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:layout_height="match_parent">
+
+
+        </com.production.qtickets.utils.TextviewRegular>
+
+
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:layout_width="194dp"
+            android:background="@color/black"
+            android:id="@+id/tv_filechoosen"
+            android:layout_margin="1dp"
+            android:textColor="@color/plane_white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/nofilechoosen"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent">
+
+
+        </com.production.qtickets.utils.TextviewRegular>
+        
+        
+    </RelativeLayout>
+
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/tv_field_type"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:paddingLeft="8dp"
+        android:visibility="gone"
+        android:paddingRight="8dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/field_et_cornner"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+</LinearLayout>

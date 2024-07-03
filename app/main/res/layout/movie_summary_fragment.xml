@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlack"
+    android:layoutDirection="ltr">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestscroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/termshowLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/txt_starcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/starring"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:id="@+id/txt_txt_starcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_starcast"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="6.1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/forteen" />
+
+            <com.production.qtickets.utils.TextviewRegular
+                android:id="@+id/txt_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_txt_starcast"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="6.1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/forteen" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="4dp"
+    android:layoutDirection="ltr"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_event_banner"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/tv_imdb_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:background="#FF2D99FB"
+            android:padding="5dp"
+            android:text="@string/t_new"
+            android:textColor="@color/colorWhite"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_event_banner"
+            android:layout_margin="0dp"
+            android:background="@color/buttomlayoutcolor"
+            android:orientation="vertical">
+
+            <com.production.qtickets.utils.TextviewBold
+                android:id="@+id/tv_event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:inputType="textCapSentences"
+                android:text="Event Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/clockLogo"
+                    android:src="@drawable/ic_calender" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/tv_event_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="Movie Name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/eight" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/Locationlogo"
+                    android:src="@drawable/ic_map_yellow" />
+
+                <com.production.qtickets.utils.TextviewRegular
+                    android:id="@+id/tv_event_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Movie Name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/eight" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tv_booknow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l1"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.production.qtickets.utils.TextviewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_ticket" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

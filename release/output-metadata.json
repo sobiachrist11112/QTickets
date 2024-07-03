@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.mobile.android.qticketsapp",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 104,
+      "versionName": "1.5.57",
+      "enabled": true,
+      "outputFile": "app-release.apk"
+    }
+  ]
+}

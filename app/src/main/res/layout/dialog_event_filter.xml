@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/event_filter_back"
+    android:layoutDirection="ltr">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/event_filter_back"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <ImageView
+            android:id="@+id/img_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tickets"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/price"
+            android:textColor="@android:color/tab_indicator_text"
+            android:textSize="@dimen/fifteen"
+            app:layout_constraintLeft_toRightOf="@+id/img_ticket" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/c1">
+
+        <com.crystal.crystalrangeseekbar.widgets.BubbleThumbRangeSeekbar
+            android:id="@+id/range_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:bar_color="@color/colorPrimaryDark"
+            app:bar_highlight_color="@color/colorPrimaryDark"
+            app:corner_radius="10"
+            app:data_type="_integer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:left_thumb_image="@drawable/round"
+            app:max_value="3000"
+            app:min_value="1"
+            app:right_thumb_image="@drawable/round"
+            app:steps="5" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/txt_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="min"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/ten"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/range_seekbar" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/txt_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="max"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/ten"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/range_seekbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/event_filter_back"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/c4">
+
+        <ImageView
+            android:id="@+id/img_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_small_calendar"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/days"
+            android:textSize="@dimen/fifteen"
+            app:layout_constraintLeft_toRightOf="@+id/img_calender" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:weightSum="4"
+        app:layout_constraintTop_toBottomOf="@+id/c2">
+
+        <com.production.qtickets.utils.TextviewBold
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_event_background"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/days"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/twelve" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/filter_event_background"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/today"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/twelve" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/filter_event_background"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/tomorrow"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/twelve" />
+
+        <com.production.qtickets.utils.TextviewBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/filter_event_background"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/weekend"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/twelve" />
+
+    </LinearLayout>
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/event_filter_back"
+        android:padding="15dp"
+        android:text="@string/select"
+        android:textSize="@dimen/fifteen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select">
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:id="@+id/txt_selected_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/ic_small_calendar"
+            android:padding="12dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/startdate"
+            android:textColor="#454646"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txt_selected_mall" />
+
+        <com.production.qtickets.utils.TextviewRegular
+            android:id="@+id/txt_selected_mall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/ic_small_calendar"
+            android:padding="12dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/enddate"
+            android:textColor="#454646"
+            app:layout_constraintLeft_toRightOf="@+id/txt_selected_date"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_apply_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_back_with_corners"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="@string/apply"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

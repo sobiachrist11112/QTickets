@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/popup_back"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:background="@color/backcolor"
+        android:layout_margin="1dp"
+        android:padding="10dp"
+        android:text="@string/attention"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/fifteen" />
+
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/txt_max_4d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_header"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/max_4d"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/twelve" />
+
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/max_4d_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_max_4d"
+        android:background="@drawable/event_rounded_textview"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="@dimen/twenty"
+        android:text="@string/max_4d_ok"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/eighteen" />
+
+</RelativeLayout>

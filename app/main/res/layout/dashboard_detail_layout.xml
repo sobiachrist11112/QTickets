@@ -1,0 +1,202 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlack"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_root"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp">
+
+
+                    <View
+                        android:id="@+id/v4_stick"
+                        android:layout_width="6dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:background="@color/plane_white">
+
+
+                    </View>
+
+
+                    <com.production.qtickets.utils.TextviewBold
+                        android:id="@+id/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_toRightOf="@+id/v4_stick"
+                        android:textAllCaps="true"
+                        android:textColor="@color/plane_white"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/view_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:drawablePadding="6dp"
+                        android:drawableTint="@color/colorWhite"
+                        android:paddingStart="12dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="2dp"
+                        android:text="View All"
+                        android:layout_marginEnd="12dp"
+                        android:textColor="@color/light_grey_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.production.qtickets.utils.TextviewRegular
+                        android:id="@+id/see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:drawablePadding="6dp"
+                        android:visibility="gone"
+                        android:drawableTint="@color/colorWhite"
+                        android:paddingStart="12dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="2dp"
+                        android:text="View All"
+                        android:layout_marginEnd="12dp"
+                        android:textColor="@color/light_grey_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="5"-->
+<!--                android:layout_height="wrap_content">-->
+
+
+
+<!--                    <View-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight=".08"-->
+<!--                        android:id="@+id/v4_stick"-->
+<!--                        android:minWidth="8dp"-->
+<!--                        android:background="@color/plane_white"-->
+<!--                        android:layout_height="24dp">-->
+
+
+<!--                    </View>-->
+
+
+
+<!--                <com.production.qtickets.utils.TextviewBold-->
+<!--                    android:id="@+id/heading"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="3.5"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:textColor="@color/plane_white"-->
+<!--                    android:textSize="@dimen/eighteen"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textAllCaps="true" />-->
+
+
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1.6">-->
+
+<!--                    <com.production.qtickets.utils.TextviewBold-->
+<!--                        android:id="@+id/see_all"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/event_rounded_textview"-->
+<!--                        android:text="@string/Seeall"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAllCaps="true"-->
+<!--                        android:visibility="gone"/>-->
+
+
+<!--                    <com.production.qtickets.utils.TextviewRegular-->
+<!--                        android:id="@+id/view_all"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginStart="8dp"-->
+<!--                        android:drawableRight="@drawable/ic_arrow_forward"-->
+<!--                        android:drawableTint="@color/colorWhite"-->
+<!--                        android:text="View All"-->
+<!--                        android:textColor="@color/light_grey_text"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:visibility="visible" />-->
+
+<!--                </RelativeLayout>-->
+
+
+
+<!--            </LinearLayout>-->
+
+
+
+
+            <View
+                android:id="@+id/moview_v1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_height=".5dp"
+                android:visibility="visible"
+                android:background="@color/contacttextcolor">
+
+            </View>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

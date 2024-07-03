@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/colorBlack"
+    android:layoutDirection="ltr">
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_f_l_name"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/user_review_bac"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/twenty"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_name"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/forteen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_f_l_name" />
+
+    <com.production.qtickets.utils.TextviewBold
+        android:id="@+id/txt_review_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sixteen"
+        app:layout_constraintLeft_toRightOf="@+id/txt_f_l_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="1"
+        android:theme="@style/RatingBar"
+        app:layout_constraintLeft_toRightOf="@+id/txt_f_l_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_review_title" />
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/twelve"
+        app:layout_constraintLeft_toRightOf="@+id/rating"
+        app:layout_constraintTop_toBottomOf="@id/txt_review_title" />
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:id="@+id/txt_user_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/twelve"
+        app:layout_constraintLeft_toRightOf="@+id/txt_f_l_name"
+        app:layout_constraintTop_toBottomOf="@id/rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

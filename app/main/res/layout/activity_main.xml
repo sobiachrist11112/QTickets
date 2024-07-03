@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/backcolor"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <com.production.qtickets.utils.TextviewBold
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@drawable/back_color_without_corner"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/movies"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fifteen" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/back_color_without_corner"
+            app:tabIndicatorColor="@color/transparent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabs"
+            android:background="@color/colorBlack"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</RelativeLayout>

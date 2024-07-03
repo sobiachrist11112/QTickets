@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.production.qtickets">
+
+    <!-- PERMISSION'S -->
+    <!-- to get response from server -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- current location -->
+    <!--
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    -->
+    <!-- callphone -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- camera and gallery -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- Notification Badger -->
+    <!-- Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- Sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.moto.home.permission.BROADCAST_BADGE" /> <!-- HTC -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" /> <!-- Required OpenGL ES 2.0. for Maps V2 -->
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/qticketsicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/qticketsicon"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".eventDetailQT5.FullImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".eventBookingConfirmQT5.EventBookingConfirmQT5Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".eventBookingPaymentSummaryQT5.EventBookingPaymentSummaryQT5Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".eventBookingSummaryQT5.EventBookingSummaryQT5Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".eventBookingDetailQT5.EventBookingDetailQT5Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".eventDetailQT5.EventDetailQT5Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".eventQT5.EventHomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- Formally used basic crash-analytics : hockeyapp -->
+        <!--
+        <meta-data
+            android:name="net.hockeyapp.android.appIdentifier"
+            android:value="${HOCKEYAPP_APP_ID}" />
+        -->
+        <!-- Formally used basic google maps API_KEY -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/googleMapsKey" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- facebook-sdk -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_testing_app_id" /> <!-- ACTIVITIES -->
+        <activity
+            android:name=".activity.SplashscreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".cmspages.CMSPagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".newsfeed.NewsFeedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".myprofile.MyProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dashboard.DashBoardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myprofile.CameraUtil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myprofile.GalleryUtil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".moviedetailes.MovieDetailsActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="www.q-tickets.com" />
+                <data android:pathPrefix="/Movies/MoviesListDetails" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.NavigationDrawerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mybookings.MyBookingsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".notifications.MyNotificationActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name=".notifications.MyNotificationActivity" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".events.EventDetails.EventDetailsActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="www.q-tickets.com" />
+                <data android:pathPrefix="/qa/Events/EventsDetails" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ticketbookingdetaile.EventBookingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".events.EventFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".events.EventDetails.EventTicketsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".moviedetailes.YoutubeActivity" />
+        <activity
+            android:name=".login.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".changepassword.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".moviedetailes.ShowTimingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".movies.seatselection.SeatSelectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ticketbookingdetaile.BookingDetaileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.PaymentWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".searchList.SearchListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".searchList.SearchListMovieDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".verify_mobile.VerifyMobileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShowWebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ticketconfirmation.TicketConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".novocinema.NovoTicketSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".novocinema.seatinglayout.NovoSeatingLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".novoticketconfirmation.NovoTicketConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity android:name=".activity.DownloadInvoiceWebView"> </activity>
+
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="@string/fb_testing_login_protocal"
+                    tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity> <!-- SERVICE'S -->
+        <!-- Firebase Notifications -->
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" /> <!-- google analytics -->
+        <!-- Add Google Map Library -->
+        <!-- <uses-library android:name="com.google.android.maps" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="@string/maps_api_key" /> -->
+        <!-- RECEIVER'S -->
+        <!-- google analytics -->
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+        <!--
+             Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting
+        -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".activity.FirebaseDataReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver> <!-- language change -->
+        <receiver
+            android:name=".utils.LocaleChangedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver> <!-- local notification -->
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.production.qtickets.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/paths" />
+    </provider>
+
+        <activity android:name=".events.PaymentWebView"> </activity>
+
+        <activity android:name=".eventQT5.EventFilterActivity"> </activity>
+
+
+        <activity android:name=".events.EventDetails.EventWebviewActivity">
+
+        </activity>
+
+
+        <activity android:name=".changepassword.PasswordResetSucessFullyActivity"> </activity>
+
+        <activity android:name=".changepassword.otp.OTPFillResetPasswordActivity"> </activity>
+
+    </application>
+
+
+
+</manifest>

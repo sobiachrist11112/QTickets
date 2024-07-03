@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginStart="12dp"
+    android:layout_height="wrap_content">
+
+    <com.production.qtickets.utils.TextviewRegular
+        android:layout_width="wrap_content"
+        android:padding="6dp"
+        android:textColor="@color/plane_white"
+        android:id="@+id/tv_filterview"
+        android:background="@drawable/background_curve_filter"
+        android:text="@string/thisWeek_"
+        android:layout_marginStart="12dp"
+        android:textSize="12sp"
+        android:layout_height="wrap_content">
+
+
+    </com.production.qtickets.utils.TextviewRegular>
+
+
+</LinearLayout>
